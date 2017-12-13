@@ -1,0 +1,61 @@
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container>
+		<row>
+			<columns large="12">
+				<h1>{%CheckoutOrderContent}</h1>
+
+				{OrderProducts(
+					before: '<hr />',
+					helper: 'emails/helpers/orderproduct'
+				)}
+
+				<row class="OrderTotalsFrame">
+					<columns large="4">&nbsp;</columns>
+					<columns large="8">
+						<table class="OrderTotalTable">
+							<tr>
+								<th>{%CheckoutProductsTotal}</th>
+								<td><strong>{OrderSubTotal}</strong></td>
+							</tr>
+							{OrderShippingCosts(
+								before: '<tr>
+									<th>
+										{%ShippingCosts}
+										{OrderShippingMethod(before: '&nbsp;(', after: ')')}
+									</th>
+									<td><strong>',
+								after: '</strong>
+									</td>
+								</tr>'
+							)}
+							{OrderPaymentCosts(
+								before: '<tr>
+									<th>
+										{%PaymentCosts}
+										{OrderPaymentMethod(before: '&nbsp;(', after: ')')}
+									</th>
+									<td><strong>',
+								after: '</strong>
+									</td>
+								</tr>'
+							)}
+						</table>
+						<hr />
+						<table class="OrderTotals OrderTotalTable">
+							<tr class="Total">
+								<th>{%Total}</th>
+								<td><strong>{OrderTotal}</strong></td>
+							</tr>
+							<tr class="TotalTax">
+								<th>{%TotalTax}</th>
+								<td>{OrderTax}</td>
+							</tr>
+						</table>
+					</columns>
+				</row>
+			</columns>
+		</row>
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>

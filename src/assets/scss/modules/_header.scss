@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// Header block
+// -----------------------------------------------------------------------------
+
+.Header {
+	background: $body-background;
+}
+
+.Header td {
+	padding: 0;
+}
+
+.Header .ShopLogo img {
+	height: auto;
+	max-height: 50px;
+	max-width: 250px;
+}

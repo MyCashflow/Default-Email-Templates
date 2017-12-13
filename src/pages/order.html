@@ -1,0 +1,24 @@
+{{> header }}
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container>
+		<row>
+			<columns large="12">
+				<h1>{OrderEmailTitle}</h1>
+				<p>
+					{{> greeting }}
+					{OrderEmailMessage}
+				</p>
+			</columns>
+		</row>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+{{> toolbox }}
+{{> order-contents }}
+{{> order-details }}
+{{> contact }}
+{{> order-legal }}
+{{> footer }}

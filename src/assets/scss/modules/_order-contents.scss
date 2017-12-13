@@ -1,0 +1,97 @@
+
+$product-row-image-size:			45px;
+
+.ProductRow p {
+	margin: 0;
+}
+
+.ProductRow > tbody > tr > th {
+	padding: 0 ($global-gutter / 2) !important;
+	vertical-align: middle;
+}
+
+.ProductRow th.ProductImage {
+	padding: 0 !important;
+	width: $product-row-image-size;
+}
+
+.ProductRow th.ProductImage img {
+	background: #ffffff;
+	border: 1px solid #e0e0e0;
+	border-radius: $global-radius;
+	padding: 2px;
+	width: 45px;
+}
+
+.QtyTimes {
+	margin-left: 0.75em;
+}
+
+.OrderTotalsFrame {
+	margin-top: $global-gutter;
+}
+
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.ProductRow th.ProductImage {
+		display: block !important;
+		margin: 0px auto $global-gutter auto !important;
+		width: 150px !important;
+	}
+
+	.ProductRow th.ProductImage img {
+		width: 150px !important;
+	}
+
+	.ProductRow {
+		margin: ($global-gutter * 2) 0;
+	}
+
+	.ProductRow td,
+	.ProductRow th {
+		text-align: center !important;
+	}
+
+	.OrderTotalsFrame {
+		margin-top: 0 !important;
+	}
+
+	.QtyTimes {
+		margin-left: 0.25em !important;
+		margin-right: 0.25em;
+	}
+}
+
+
+
+
+.OrderTotalsFrame > table th {
+	padding: 0 !important;
+}
+
+.OrderTotalsFrame hr {
+	margin: 10px 0 0;
+}
+
+
+.OrderTotalsFrame table.OrderTotalTable th {
+	padding-right: ($global-gutter / 2) !important;
+	text-align: right;
+}
+
+.OrderTotalsFrame table td {
+	width: 35%;
+}
+
+.Total th,
+.Total td {
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.TotalTax th,
+.TotalTax td {
+	font-size: 80%;
+	color: #888888;
+}

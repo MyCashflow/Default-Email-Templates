@@ -1,0 +1,47 @@
+{{> header}}
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container>
+		<row>
+			<columns large="12">
+				<h1>{OrderEmailTitle}</h1>
+				<p>
+					{{> greeting }}
+					{%EmailTextPaymentNotification}
+				</p>
+				{PaymentMethodInstructions(
+					before: '<p>',
+					after: '</p>'
+				)}
+			</columns>
+		</row>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+<wrapper class="Primary">
+	<container>
+		<row>
+			<columns>
+				<strong>{%PaymentReference}</strong><br />
+				{OrderPaymentReference}
+			</columns>
+			<columns>
+				<strong>{%OrderOpenTotal}</strong><br />
+				{OrderOpenTotal}
+			</columns>
+			<columns>
+				<strong>{%PaymentMethod}</strong><br />
+				{OrderPaymentMethod}
+			</columns>
+		</row>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+{{> toolbox}}
+{{> order-contents}}
+{{> order-details}}
+{{> contact}}
+{{> footer}}

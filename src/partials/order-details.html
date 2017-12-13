@@ -1,0 +1,58 @@
+<wrapper class="Light">
+	<spacer size="30"></spacer>
+	<container>
+		<row>
+			<columns large="4">
+				<h3>{%OrderInformation}</h3>
+				<p>
+					{OrderDate(
+						before: '<strong>{%Date}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderNumber(
+						before: '<strong>{%Ordernumber}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderCustomerNumber(
+						before: '<strong>{%CustomerNumber}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderPaymentReference(
+						before: '<strong>{%PaymentReference}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderOpenTotal(
+						before: '<strong>{%OrderOpenTotal}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderPaymentMethod(
+						before: '<strong>{%PaymentMethod}</strong>&nbsp;<span>',
+						after: ', {OrderPaymentStatus}</span><br />'
+					)}
+					{OrderShippingMethod(
+						before: '<strong>{%CheckoutShipping}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderTrackingCode(
+						before: '<strong>{%TrackingCode}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+				</p>
+			</columns>
+			<columns large="4">
+				<h3>{%CheckoutCustomerInformation}</h3>
+				{OrderCustomerInformation(
+					before: '<p>',
+					after: '</p>'
+				)}
+			</columns>
+			<columns large="4">
+				{OrderShippingInformation(
+					before: '<h3>{%CheckoutShippingInformation}</h3><p>',
+					after: '</p>'
+				)}
+			</columns>
+		</row>
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>

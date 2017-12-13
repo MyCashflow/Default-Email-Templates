@@ -1,0 +1,32 @@
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container>
+		<row>
+			<columns large="12">
+				<h1>{%CheckoutOrderContent}</h1>
+
+				{CartProducts(
+					before: '<hr />',
+					helper: 'emails/helpers/cartproduct'
+				)}
+				
+				<row class="OrderTotalsFrame">
+					<columns large="4">&nbsp;</columns>
+					<columns large="8">
+						<table class="OrderTotals OrderTotalTable">
+							<tr class="Total">
+								<th>{%Total}</th>
+								<td><strong>{CartSubTotal}</strong></td>
+							</tr>
+							<tr class="TotalTax">
+								<th>{%TotalTax}</th>
+								<td>{CartTax}</td>
+							</tr>
+						</table>
+					</columns>
+				</row>
+			</columns>
+		</row>
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>

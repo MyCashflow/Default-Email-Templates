@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// Content block types
+// -----------------------------------------------------------------------------
+
+.container {
+	max-width: $global-width;
+}
+
+.wrapper.Primary,
+.wrapper.Primary .container,
+.wrapper.Primary .wrapper,
+.wrapper.Primary .wrapper .container {
+	background: $body-background;
+}
+
+.wrapper.Secondary,
+.wrapper.Secondary .container,
+.wrapper.Secondary .wrapper,
+.wrapper.Secondary .wrapper .container  {
+	background: darken($light-gray, 5%);
+}
+
+.wrapper.Light,
+.wrapper.Light .container,
+.wrapper.Light .wrapper,
+.wrapper.Light .wrapper .container {
+	background: $light-gray;
+}
+
+// -----------------------------------------------------------------------------
+// Buttons
+// -----------------------------------------------------------------------------
+
+a.Button {
+	background: $primary-color;
+	border-radius: $global-radius;
+	color: #ffffff;
+	display: inline-block;
+	margin-bottom: ($global-gutter / 2);
+	padding: 8px 18px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+	a.Button {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Separators
+// -----------------------------------------------------------------------------
+
+hr {
+	border: 0;
+	height: 1px;
+	background: #e0e0e0;
+}
+
+.ProductImage {
+	margin: 0 auto;
+}
+
+.ProductImage.Small {
+	max-width: 50px;
+}
+
+.ProductImage.Medium {
+	max-width: 250px;
+}
+
+.ProductImage.Big {
+	width: 100%;
+}
+
+.ProductImage .wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.ProductImage .wrapper td {
+	border: 1px solid $color-image-border;
+	border-radius: $global-radius !important;
+	padding: $padding-image;
+	vertical-align: middle;
+}
+
+.ProductImage img {
+	border: 0;
+	height: auto !important;
+	width: 100%;
+	max-width: 100% !important;
+	max-height: 100% !important;
+}

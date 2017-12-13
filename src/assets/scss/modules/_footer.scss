@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// Legal texts
+// -----------------------------------------------------------------------------
+
+.wrapper.Legal h3 {
+	color: lighten($global-font-color, 40%);
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.wrapper.Legal p {
+	color: lighten($global-font-color, 40%);
+	font-size: 10px;
+	line-height: 13px;
+}
+
+// -----------------------------------------------------------------------------
+// Powered by MyCashflow -text
+// -----------------------------------------------------------------------------
+
+.wrapper.PoweredBy p {
+	font-size: 10px;
+	line-height: 13px;
+	color: lighten($global-font-color, 35%);
+	text-align: center;
+}
+
+.wrapper.PoweredBy a {
+	color: lighten($global-font-color, 35%);
+	text-decoration: underline;
+}

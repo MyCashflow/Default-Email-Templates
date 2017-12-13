@@ -1,0 +1,12 @@
+<div itemprop="acceptedOffer" itemscope itemtype="http://schema.org/Offer">
+	<div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
+		<meta itemprop="name" content="{OrderProductName}"/>
+		<link itemprop="url" href="{ShopUrl}{ProductURL}"/>
+		<link itemprop="image" href="{ShopUrl}{ProductImageURL}"/>
+	</div>
+	<meta itemprop="price" content="{OrderProductPrice(currencysymbol: false, decimalsep: '.', thousandssep: '')}"/>
+	<meta itemprop="priceCurrency" content="{Currency(exchanged: true)}"/>
+	<div itemprop="eligibleQuantity" itemscope itemtype="http://schema.org/QuantitativeValue">
+		<meta itemprop="value" content="{OrderProductQuantity}"/>
+	</div>
+</div>
