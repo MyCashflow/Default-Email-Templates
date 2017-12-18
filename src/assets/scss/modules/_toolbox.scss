@@ -5,3 +5,13 @@
 .wrapper.Toolbox a {
 	@extend .Button;
 }
+
+// -----------------------------------------------------------------------------
+// Newsletter toolbox (above header)
+// -----------------------------------------------------------------------------
+
+.wrapper.Toolbox.Newsletter th {
+	color: lighten($global-font-color, 20%);
+	font-size: 10px;
+	text-align: right;
+}
