@@ -1,0 +1,26 @@
+---
+subject: '{NewsletterSubject}'
+---
+
+{{> newsletter-toolbox }}
+{{> header }}
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container>
+		<row>
+			<columns large="12">
+				<h1>{%Hi} {NewsletterName}</h1>
+				{NewsletterMessage}
+			</columns>
+		</row>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+{{!-- {%NewsletterSharing} missing... but coming! --}}
+
+{{> promote-hotpicks }}
+{{> promote-newproducts }}
+{{> contact }}
+{{> footer }}
