@@ -1,0 +1,20 @@
+{HotPicks(
+	limit: 3,
+	sort: 'random',
+	before: '
+		<wrapper class="Secondary">
+			<spacer size="30"></spacer>
+			<container>
+				<row>
+					<columns>
+						<h2>{%PicksFromShop}</h2>
+					</columns>
+				</row>
+				<row>',
+	helper: 'emails/helpers/emailproduct',
+	after: '
+				</row>
+			</container>
+			<spacer size="20"></spacer>
+		</wrapper>'
+)}
