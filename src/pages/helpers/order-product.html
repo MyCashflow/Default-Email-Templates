@@ -1,0 +1,35 @@
+<table class="ProductTable row collapse">
+	<tbody>
+		<tr class="ProductRow">
+			<th class="Image small-12 columns first">
+				<div class="ImageFrame">
+					<a href="{ProductURL}">
+						<img src="{ProductImageURL(width: 1200, height: 1200, link: false)}" alt="{ProductName}" />
+					</a>
+				</div>
+			</th>
+			<th class="Name small-12 columns">
+				<div class="ProductName">
+					<a href="{ProductURL(or: '#product' )}">{OrderProductName}</a>
+				</div>
+				{OrderProductVariation(before:'<div class="Variation">',after:'</div>')}
+				{OrderProductDownloadLink(before:'<div class="Download"><span>{%DownloadFile}: </span><strong>',after:'</strong></div>')}
+				{OrderProductShippingStatus(
+					before: '<div class="DeliveryDate"><span>{%OrderDeliveryDate}: </span><strong>',
+					after: '</strong></div>'
+				)}
+			</th>
+			<th class="Unit small-12 columns">
+				<table>
+					<tr>
+						<th class="Price">{OrderProductPrice}</th>
+						<th class="QtyTimes"><strong>&times;</strong></th>
+						<th class="Quantity">{OrderProductQuantity(mode: 'preview')}</th>
+					</tr>
+				</table>
+			</th>
+			<th class="Total small-12 columns last"><strong>{OrderProductTotal}</strong></th>
+		</tr>
+	</tbody>
+</table>
+<hr />
