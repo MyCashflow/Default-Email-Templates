@@ -18,12 +18,21 @@ subject: '{OrderEmailTitle}'
 					</code>
 				</p>'
 		)}
+		<spacer size="15"></spacer>
+		{OrderShippingInformation(
+			force: true,
+			before: '
+				<p>
+					<strong>{%CheckoutShippingInformation}</strong><br />',
+			after: '
+				</p>'
+		)}
 	</container>
 	<spacer size="20"></spacer>
 </wrapper>
 
 {{> toolbox }}
 {{> order-contents }}
-{{> order-details }}
+{{> order-details-simple }}
 {{> contact }}
 {{> footer }}
