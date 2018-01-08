@@ -7,7 +7,7 @@
     "start": "gulp --production",
     "build": "gulp --production",
     "zip": "gulp zip --production",
-    "litmus": "gulp litmus --production",
+    "litmus": "gulp litmus --production"
   },
   "author": "Teemu Kuronen <teemu@pulse247.info>",
   "license": "MIT",
