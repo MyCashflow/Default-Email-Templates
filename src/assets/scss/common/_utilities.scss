@@ -1,45 +1,28 @@
 // -----------------------------------------------------------------------------
+// Show hide
+// -----------------------------------------------------------------------------
+
+@media only screen and (min-width: #{$global-breakpoint}) {
+	.Show-Small {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.Hide-Small {
+		display: none !important;
+		height: 0 !important;
+		overflow: hidden !important;
+	}
+	.Show-Small {
+		display: block !important;
+	}
+}
+
+// -----------------------------------------------------------------------------
 // Remove gutter
 // -----------------------------------------------------------------------------
 
 .NoMargin th {
 	padding: 0;
-}
-
-// -----------------------------------------------------------------------------
-// Text aligment
-// -----------------------------------------------------------------------------
-
-.Text-Left {
-	text-align: left;
-}
-
-.Text-Center {
-	text-align: center;;
-}
-
-.Text-Right {
-	text-align: right;
-}
-
-//------------------------------------------------------------------------------
-// Relative 1:1 squares
-//------------------------------------------------------------------------------
-
-.Square {
-	position: relative;
-	width: 100%;
-}
-
-.Square.before {
-	display: block;
-	padding-top: 100%;
-}
-
-.Square-Content {
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
 }
