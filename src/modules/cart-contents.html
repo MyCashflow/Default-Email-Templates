@@ -1,0 +1,54 @@
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		<h1>{%CheckoutOrderContent}</h1>
+		{CartProducts(
+			before: '<hr />',
+			helper: 'emails/helpers/cart-product'
+		)}
+		<table class="ProductsTotal">
+			<tr class="Subtotal">
+				<th>{%CheckoutProductsTotal}</th>
+				<td><strong>{CartSubTotal}</strong></td>
+			</tr>
+			{CartShippingCosts(
+				before: '
+				<tr class="Subtotal ShippingCosts">
+					<th>
+						{%ShippingCosts}
+						{CartShippingMethod(before: '(', after: ')')}
+					</th>
+					<td><strong>',
+				after: '</strong>
+					</td>
+				</tr>'
+			)}
+			{CartPaymentCosts(
+				before: '
+				<tr class="Subtotal PaymentCosts">
+					<th>
+						{%PaymentCosts}
+						{CartPaymentMethod(before: '(', after: ')')}
+					</th>
+					<td><strong>',
+				after: '</strong>
+					</td>
+				</tr>'
+			)}
+			<tr class="ProductsTotalRowSeparator">
+				<td colspan="2">
+					<hr />
+				</td>
+			</tr>
+			<tr class="ProductsTotal">
+				<th>{%Total}</th>
+				<td><strong>{CartTotal}</strong></td>
+			</tr>
+			<tr class="ProductsTotalTax">
+				<th>{%TotalTax}</th>
+				<td>{CartTax}</td>
+			</tr>
+		</table>
+	</container>
+	<spacer size="10"></spacer>
+</wrapper>

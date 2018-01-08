@@ -1,0 +1,28 @@
+<wrapper class="Primary Toolbox">
+	<spacer size="10"></spacer>
+	<container class="Block">
+		<p class="text-right">
+			{{#ifpage 'order'}}
+				<a href="{ShopUrl}/orderstatus/">{%Ordertracking}</a>
+				{OrderDownloadInvoice}
+				{OrderDownloadReceipt}
+			{{/ifpage}}
+			{{#ifpage 'cart' 'cart-reminder'}}
+				<a href="{CartShareLink}">{%CartEmailHtmlLink}</a>
+			{{/ifpage}}
+			{{#ifpage 'payment-notification'}}
+				{TransactionPaymentLink(
+					before: '<a href="',
+					after: '">{%PaymentTransactionLinkText}</a>'
+				)}
+			{{/ifpage}}
+			{{#ifpage 'shipping-confirmation'}}
+				{OrderTrackingUrl(
+					before: '<a href="',
+					after: '">{%TrackOrder}</a>'
+				)}
+			{{/ifpage}}
+		</p>
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>
