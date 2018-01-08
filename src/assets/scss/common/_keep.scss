@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// Pass styles beyond the style inliner
+// NOTE! Some webmails might drop these out!
+// -----------------------------------------------------------------------------
+
+@media all {
+
+	// ---------------------------------------------------------------------------
+	// Links
+	// ---------------------------------------------------------------------------
+
+	a, a:hover {
+		color: $primary-color !important;
+		text-decoration: underline !important;
+	}
+
+	// ---------------------------------------------------------------------------
+	// Fallback for the toolbox links
+	// ---------------------------------------------------------------------------
+
+	.wrapper.Toolbox a {
+		background: $primary-color;
+		border-radius: $global-radius;
+		color: text-contrast($primary-color) !important;
+		display: inline-block;
+		margin-bottom: ($global-gutter / 2);
+		padding: 8px 18px;
+		text-align: center;
+		text-decoration: none !important;
+		vertical-align: middle;
+	}
+
+}
