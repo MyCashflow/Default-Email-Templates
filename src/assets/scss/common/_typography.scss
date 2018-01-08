@@ -7,5 +7,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:hover {
+	color: $color-accent-1;
 	text-decoration: underline;
+}
+
+code {
+	background: $color-boxed-bg;
+	border: 1px solid darken($color-boxed-bg, 5%);
+	border-radius: $border-radius;
+	padding: 3px 7px;
 }
