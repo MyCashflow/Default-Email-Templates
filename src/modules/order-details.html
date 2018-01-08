@@ -3,6 +3,25 @@
 	<container>
 		<row>
 			<columns large="6">
+				<spacer size="20" class="Show-Small"></spacer>
+				<h3>{%CheckoutShippingInformation}</h3>
+				{OrderShippingInformation(
+					force: true,
+					before: '<p>',
+					after: '</p>'
+				)}
+			</columns>
+			<columns large="6">
+				<h3>{%CheckoutCustomerInformation}</h3>
+				{OrderCustomerInformation(
+					before: '<p>',
+					after: '</p>'
+				)}
+			</columns>
+		</row>
+		<spacer size="20"></spacer>
+		<row>
+			<columns large="6">
 				<h3>{%OrderInformation}</h3>
 				<p>
 					{OrderDate(
@@ -39,27 +58,7 @@
 					)}
 				</p>
 			</columns>
-			<columns large="6">
-				<spacer size="20" class="Show-Small"></spacer>
-				<h3>{%CheckoutCustomerInformation}</h3>
-				{OrderCustomerInformation(
-					before: '<p>',
-					after: '</p>'
-				)}
-			</columns>
 		</row>
-		{OrderShippingInformation(
-			before: '
-				<spacer size="20"></spacer>
-				<row>
-					<columns large="6">
-						<h3>{%CheckoutShippingInformation}</h3>
-						<p>',
-			after: '
-						</p>
-					</columns>
-				</row>'
-		)}
 	</container>
 	<spacer size="30"></spacer>
 </wrapper>
