@@ -1,0 +1,23 @@
+
+# Usage
+
+Open terminal application and goto you project directory (where the
+gulpfile.babel.js is). Execute following command on the terminal in order to
+start email utility.
+
+npm run build
+
+The utility will automatically open a browser window where all changes are
+updated automatically.
+
+NOTE!
+
+Preview DOES NOT handle any interface tags, so the output might look incorrect
+or awful. In order to preview the emails you need to uplado files from the "dist/"
+directory to your theme's root folder.
+
+You can ignore following files and directories while uploading your changes to
+the MyCashflow's servers.
+
+dist/css/
+dist/index.html
