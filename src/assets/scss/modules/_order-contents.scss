@@ -20,6 +20,7 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 }
 
 .ProductRow th.Unit {
+	padding: 0 $product-spacing 0 0 !important;
 	vertical-align: middle !important;
 	width: 23%;
 }
@@ -27,7 +28,7 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 .ProductRow th.Total {
 	padding: 0 !important;
 	vertical-align: middle !important;
-	width: 15%;
+	width: 100px;
 }
 
 .ProductRow .Unit .Price {
@@ -94,7 +95,7 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 
 .ProductsTotal .Subtotal td {
 	font-weight: bold;
-	width: 35%;
+	width: 100px;
 }
 
 .ProductsTotal .ProductsTotal th,
@@ -149,5 +150,9 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 	.ProductsTotal {
 		margin: $grid-gutter 0 !important;
 		width: 100% !important;
+	}
+
+	.ProductsTotal .Subtotal td {
+		width: 35% !important;
 	}
 }
