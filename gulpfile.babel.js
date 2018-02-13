@@ -8,7 +8,6 @@ import inky				from 'inky';
 import fs					from 'fs';
 import siphon			from 'siphon-media-query';
 import path				from 'path';
-import merge			from 'merge-stream';
 import beep				from 'beepbeep';
 import colors			from 'colors';
 
@@ -124,38 +123,4 @@ function inliner(css) {
 		});
 
 	return pipe();
-}
-
-// Copy and compress into Zip
-function zip() {
-	var dist = 'dist';
-	var ext = '.html';
-
-	function getHtmlFiles(dir) {
-		return fs.readdirSync(dir)
-			.filter(function(file) {
-				var fileExt = path.join(dir, file);
-				var isHtml = path.extname(fileExt) == ext;
-				return fs.statSync(fileExt).isFile() && isHtml;
-			});
-	}
-
-	var htmlFiles = getHtmlFiles(dist);
-
-	var moveTasks = htmlFiles.map(function(file){
-		var sourcePath = path.join(dist, file);
-		var fileName = path.basename(sourcePath, ext);
-
-		var moveHTML = gulp.src(sourcePath)
-			.pipe($.rename(function (path) {
-				path.dirname = fileName;
-				return path;
-			}));
-
-		return merge(moveHTML)
-			.pipe($.zip(fileName+ '.zip'))
-			.pipe(gulp.dest('dist'));
-	});
-
-	return merge(moveTasks);
 }
