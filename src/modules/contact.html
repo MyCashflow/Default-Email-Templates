@@ -1,33 +1,27 @@
 <wrapper class="Primary">
 	<spacer size="30"></spacer>
 	<container>
-		<row>
-			<columns large="8">
+		<row class="NoMargin">
+			<columns large="6">
 				<h3>{%ContactUs}</h3>
-				<row class="NoMargin">
-					<columns large="6">
-						<p>
-							{ContactCompany(after:'<br />')}
-							{ContactStreetAddress1(after:'{ContactStreetAddress2(before:',&nbsp;')}<br />')}
-							{ContactZip} {ContactCity(after:'<br />')}
-							{ContactCountry}
-						</p>
-					</columns>
-					<columns large="6">
-						<p>
-							{ContactEmail(
-								link: false,
-								before: '<a href="',
-								after:'">{ContactEmail(link: false)}</a><br />'
-							)}
-							{ContactInternet(after:'<br />')}
-							{ContactPhone(after:'<br />')}
-							{ContactBusinessID(before:'{%BusinessID}:&nbsp;')}
-						</p>
-					</columns>
-				</row>
+				<p>
+					{ContactCompany(after:'<br />')}
+					{ContactStreetAddress1(after:'{ContactStreetAddress2(before:',&nbsp;')}<br />')}
+					{ContactZip} {ContactCity(after:'<br />')}
+					{ContactCountry}
+				</p>
+				<p>
+					{ContactEmail(
+						link: false,
+						before: '<a href="',
+						after:'">{ContactEmail(link: false)}</a><br />'
+					)}
+					{ContactInternet(after:'<br />')}
+					{ContactPhone(after:'<br />')}
+					{ContactBusinessID(before:'{%BusinessID}:&nbsp;')}
+				</p>
 			</columns>
-			<columns large="4">
+			<columns large="6">
 				{Banners(
 					name: 'followbuttons',
 					before: '<h1>{%FollowUs}</h1><p>',
