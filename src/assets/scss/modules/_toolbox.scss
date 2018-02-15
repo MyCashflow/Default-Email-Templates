@@ -2,8 +2,16 @@
 // Buttons on toolbox block
 // -----------------------------------------------------------------------------
 
-.wrapper.Toolbox a {
-	@extend .Button;
+.wrapper.Toolbox .button {
+	float: left;
+	Margin: 0 $grid-list-gutter $grid-list-gutter 0;
+	margin: 0 $grid-list-gutter $grid-list-gutter 0;
+}
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.wrapper.Toolbox .button {
+		float: none !important;
+	}
 }
 
 // -----------------------------------------------------------------------------

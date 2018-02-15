@@ -3,62 +3,52 @@
 // -----------------------------------------------------------------------------
 
 .container {
-	background: $body-background !important;
+	background: $body-background;
 	max-width: $global-width;
-}
-
-.container.Block > tbody > tr > td {
-	padding: 0 $global-gutter;
 }
 
 .wrapper.Primary,
 .wrapper.Primary .container,
 .wrapper.Primary .wrapper,
 .wrapper.Primary .wrapper .container {
-	background: $body-background !important;
+	background: $body-background;
 }
 
 .wrapper.Secondary,
 .wrapper.Secondary .container,
 .wrapper.Secondary .wrapper,
 .wrapper.Secondary .wrapper .container  {
-	background: darken($light-gray, 5%) !important;
+	background: darken($light-gray, 5%);
 }
 
 .wrapper.Light,
 .wrapper.Light .container,
 .wrapper.Light .wrapper,
 .wrapper.Light .wrapper .container {
-	background: $light-gray !important;
+	background: $light-gray;
+}
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.wrapper-inner {
+		padding: 0 ($global-gutter / 2) !important;
+	}
 }
 
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
 
-.Button {
-	background: $primary-color;
-	border-radius: $global-radius;
-	color: text-contrast($primary-color) !important;
-	display: inline-block;
-	margin-bottom: ($global-gutter / 2);
-	padding: 8px 18px;
-	text-align: center;
-	text-decoration: none !important;
-	vertical-align: middle;
+table.button {
+	table td {
+		border-radius: $button-radius;
+		border: 0;
+	}
 }
 
-.Button.Block {
-	box-sizing: border-box;
-	display: block !important;
-	width: 100% !important;
-}
-
-@media only screen and (max-width: #{$global-breakpoint}) {
-	.Button {
-		box-sizing: border-box;
-		display: block !important;
-		width: 100% !important;
+.button a {
+	&, &:hover, &:link, &:visited, font {
+		color: text-contrast($primary-color);
+		text-decoration: none;
 	}
 }
 

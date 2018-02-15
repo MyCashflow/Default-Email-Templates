@@ -1,28 +1,38 @@
 <wrapper class="Primary Toolbox">
 	<spacer size="10"></spacer>
 	<container class="Block">
-		<p class="text-right">
 			{{#ifpage 'order'}}
-				<a href="{ShopUrl}/orderstatus/">{%Ordertracking}</a>
-				{OrderDownloadInvoice}
-				{OrderDownloadReceipt}
+				<button class="small-expand" href="{ShopUrl}/orderstatus/">
+					<font>
+						{%Ordertracking}
+					</font>
+				</button>
+				{OrderDownloadInvoiceURL(
+					before: '<button class="small-expand" href="',
+					after: '"><font>{%DownloadInvoice}</font></button>'
+				)}
+				{OrderDownloadReceiptURL(
+					before: '<button class="small-expand" href="',
+					after: '"><font>{%DownloadReceipt}</font></button>'
+				)}
 			{{/ifpage}}
 			{{#ifpage 'cart' 'cart-reminder'}}
-				<a href="{CartShareLink}">{%CartEmailHtmlLink}</a>
+				<button href="{CartShareLink}" class="small-expand">
+					<font>{%CartEmailHtmlLink}</font>
+				</button>
 			{{/ifpage}}
 			{{#ifpage 'payment-notification'}}
 				{TransactionPaymentLink(
-					before: '<a href="',
-					after: '">{%PaymentTransactionLinkText}</a>'
+					before: '<button class="small-expand" href="',
+					after: '"><font>{%PaymentTransactionLinkText}</font></button>'
 				)}
 			{{/ifpage}}
 			{{#ifpage 'shipping-confirmation'}}
 				{OrderTrackingUrl(
-					before: '<a href="',
-					after: '">{%TrackOrder}</a>'
+					before: '<button class="small-expand" href="',
+					after: '"><font>{%TrackOrder}</font></button>'
 				)}
 			{{/ifpage}}
-		</p>
 	</container>
 	<spacer size="30"></spacer>
 </wrapper>
