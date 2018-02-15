@@ -24,22 +24,14 @@
 	border: 1px solid $color-image-border;
 	border-radius: $global-radius;
 	box-sizing: border-box;
-	height: auto;
+	display: block;
 	padding: $padding-image;
-	width: 100%;
 }
 
-.ImageFrame.Medium {
+.ImageFrame.Medium img {
 	width: 250px;
 }
 
-.ImageFrame.Small {
+.ImageFrame.Small img {
 	width: 50px;
-}
-
-.ImageFrame img {
-	height: auto;
-	max-height: 100%;
-	max-width: 100%;
-	width: 100%;
 }

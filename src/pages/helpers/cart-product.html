@@ -2,18 +2,18 @@
 	<tbody>
 		<tr class="ProductRow">
 			<th class="Image small-12 columns first">
-				<div class="ImageFrame">
-					<a href="{ProductURL}">
-						<img src="{ProductImageURL(width: 1200, height: 1200, link: false)}" alt="{ProductName}" />
-					</a>
-				</div>
+				<a href="{ProductURL}">
+					<img src="{ProductImageURL(width: 400, height: 400, link: false)}" alt="{ProductName}" width="50" />
+				</a>
 			</th>
+			<th class="Spacer small-12 columns"></th>
 			<th class="Name small-12 columns">
 				<div class="ProductName">
-					<a href="{ProductURL(or: '#product' )}">{ProductName}</a>
+					<a href="{ProductURL(or: '#product' )}"><span>{ProductName}</span></a>
 				</div>
 				{CartProductVariation(before:'<div class="Variation">',after:'</div>')}
 			</th>
+			<th class="Spacer small-12 columns"></th>
 			<th class="Unit small-12 columns">
 				<table>
 					<tr>
@@ -23,6 +23,7 @@
 					</tr>
 				</table>
 			</th>
+			<th class="Spacer small-12 columns"></th>
 			<th class="Total small-12 columns last"><strong>{CartProductTotal}</strong></th>
 		</tr>
 	</tbody>

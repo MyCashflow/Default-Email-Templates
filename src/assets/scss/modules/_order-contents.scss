@@ -10,24 +10,43 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 	padding-right: 0;
 }
 
+.ProductRow th.Spacer {
+	width: $product-spacing;
+}
+
 .ProductRow th.Image {
+	background: #ffffff;
+	border: 1px solid $color-image-border;
+	text-align: center;
+	vertical-align: middle;
 	width: 60px;
 }
 
+.ProductRow th.Image a {
+	display: block;
+	Margin: 4px;
+	margin: 4px;
+}
+
+.ProductRow th.Image img {
+	Margin: 0 auto;
+	margin: 0 auto;
+	width: 50px;
+}
+
 .ProductRow th.Name {
-	padding: 0 $product-spacing !important;
-	vertical-align: middle !important;
+	vertical-align: middle;
 }
 
 .ProductRow th.Unit {
-	padding: 0 $product-spacing 0 0 !important;
-	vertical-align: middle !important;
+	vertical-align: middle;
 	width: 23%;
 }
 
 .ProductRow th.Total {
-	padding: 0 !important;
-	vertical-align: middle !important;
+	padding: 0;
+	padding-right: 0;
+	vertical-align: middle;
 	width: 100px;
 }
 
@@ -37,7 +56,7 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 }
 
 .ProductRow .Unit .QtyTimes {
-	padding: 0 7px !important;
+	padding: 0 7px;
 	text-align: center;
 	width: 15px;
 }
@@ -50,11 +69,12 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 // Single row elements
 // -----------------------------------------------------------------------------
 
-.ProductRow .Name a {
-	color: $color-text-dark !important;
+.ProductRow .Name a,
+.ProductRow .Name a span {
+	color: $color-text-dark;
 	font-weight: bold;
 	line-height: 1.3em;
-	text-decoration: none !important;
+	text-decoration: none;
 }
 
 .Variation,
@@ -79,9 +99,8 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 // Order total section
 // -----------------------------------------------------------------------------
 
-.ProductsTotal {
-	margin: $grid-gutter 0 $grid-gutter 30%;
-	width: 70%;
+table.ProductsTotal {
+	width: 100%;
 }
 
 .ProductsTotal .ProductsTotalRowSeparator hr {
@@ -91,6 +110,10 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 .ProductsTotal th {
 	padding-right: $grid-list-gutter;
 	text-align: right;
+}
+
+.ProductsTotal th.Spacer {
+	width: 30%;
 }
 
 .ProductsTotal .Subtotal td {
@@ -132,8 +155,16 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 		width: 100% !important;
 	}
 
-	.ProductRow .Image .ImageFrame {
-		margin: 0 auto $grid-list-gutter auto !important;
+	.ProductRow th.Image {
+		background: none !important;
+		border: 0 !important;
+		padding-bottom: $grid-gutter !important;
+	}
+
+	.ProductRow .Image a img {
+		background: #ffffff !important;
+		border: 1px solid $color-image-border !important;
+		padding: 4px !important;
 		width: 150px !important;
 	}
 
@@ -152,7 +183,22 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 		width: 100% !important;
 	}
 
+	.ProductsTotal th.Spacer {
+		display: none !important;
+		width: 0% !important;
+	}
+
 	.ProductsTotal .Subtotal td {
 		width: 35% !important;
+	}
+
+	.ProductsTotal .Subtotal th {
+		font-weight: bold !important;
+	}
+
+	.ProductsTotal .Subtotal th span {
+		display: block;
+		font-size: $font-size-small;
+		font-weight: normal;
 	}
 }
