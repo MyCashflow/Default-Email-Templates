@@ -2,19 +2,32 @@
 // Product promotes
 // -----------------------------------------------------------------------------
 
+table.container.PromotedProducts {
+	max-width: $global-width + ($grid-gutter * 2);
+	width: $global-width + ($grid-gutter * 2);
+}
+
 .PromotedProduct {
-	width: 140px;
+	width: 160px;
 }
 
 .PromotedProduct .ImageFrame {
+	background: #ffffff;
+	border: 1px solid $color-image-border;
+	border-radius: $global-radius;
+	box-sizing: border-box;
+	display: block;
 	margin: 0 auto ($grid-list-gutter / 2) auto;
+	padding: $padding-image;
+	width: 160px;
 }
 
 .PromotedProduct h3 {
 	margin: 0 !important;
 }
 
-.PromotedProduct h3 a {
+.PromotedProduct h3 a,
+.PromotedProduct h3 a span {
 	color: $color-text-dark !important;
 	font-size: $font-size;
 	line-height: 1.3em;
@@ -38,7 +51,6 @@
 
 	.PromotedProduct .ImageFrame {
 		margin: 0 auto $grid-list-gutter auto !important;
-		max-height: 150px !important;
 	}
 
 	.PromotedProduct h3,

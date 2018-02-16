@@ -1,11 +1,11 @@
 <columns large="4">
 	<div class="PromotedProduct">
-		<div class="ImageFrame">
-			<a href="{ProductURL}" class="ProductImage Big">
-				<img src="{ProductImageURL(width: 1200, height: 1200, link: false)}" alt="{ProductName}" />
+		<div>
+			<a href="{ProductURL}" class="ImageFrame ProductImage Big">
+				<img src="{ProductImageURL(width: 400, height: 400, link: false)}" alt="{ProductName}" width="160" />
 			</a>
 		</div>
-		<h3><a href="{ProductURL}">{ProductName}</a></h3>
+		<h3><a href="{ProductURL}"><span>{ProductName}</span></a></h3>
 		<div class="Price">{ProductPrice(currencysymbol: true)}</div>
 	</div>
 </columns>
