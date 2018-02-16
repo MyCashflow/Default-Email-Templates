@@ -16,34 +16,39 @@ subject: '{OrderEmailTitle}'
 <wrapper class="Primary OrderMessages">
 	<spacer size="10"></spacer>
 	<container class="Block">
-		<div class="Timeline">
-			<div class="StartPoint"></div>
+		<div class="TimelineEvents">
 			{OrderComments(from: 'admin', limit: 1, helper: 'emails/helpers/order-comment')}
 			{OrderComments(start: 1, limit: 4, helper: 'emails/helpers/order-comment')}
-			<div class="TimelineSpacer">
-				<spacer size="10"></spacer>
-			</div>
 			<div class="TimelineBreak">
-				<div class="Dot"></div>
-				<div class="Dot"></div>
-				<div class="Dot"></div>
+				<blockquote class="TimelineMessage Dot">
+					<spacer size="3"></spacer>
+				</blockquote>
+				<blockquote class="TimelineMessage Dot">
+					<spacer size="3"></spacer>
+				</blockquote>
+				<blockquote class="TimelineMessage Dot">
+					<spacer size="3"></spacer>
+				</blockquote>
 			</div>
-			<div class="TimelineSpacer">
-				<spacer size="10"></spacer>
-			</div>
-			<div class="TimelineEvent">
-				<div class="TimelineTitle">
-					<h6>
-						{%Ordernumber}
-						<strong>#{OrderNumber}</strong>,
-						{OrderDate}
-					</h6>
-				</div>
-				<div class="TimelineSpacer">
-					<spacer size="50"></spacer>
-				</div>
-			</div>
-			<div class="EndPoint"></div>
+			<blockquote class="TimelineMessage">
+				<spacer size="15"></spacer>
+			</blockquote>
+			<table class="TimelineTitle">
+				<tbody>
+					<tr>
+						<td>
+							<h6>
+								{%Ordernumber}
+								<strong>#{OrderNumber}</strong>,
+								{OrderDate}
+							</h6>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<blockquote class="TimelineMessage">
+				<spacer size="35"></spacer>
+			</blockquote>
 		</div>
 	</container>
 </wrapper>
