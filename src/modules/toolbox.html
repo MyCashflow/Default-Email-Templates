@@ -3,34 +3,34 @@
 	<container class="Block">
 			{{#ifpage 'order'}}
 				<button class="small-expand" href="{ShopUrl}/orderstatus/">
-					<font>
+					<span>
 						{%Ordertracking}
-					</font>
+					</span>
 				</button>
-				{OrderDownloadInvoiceURL(
+				{OrderInvoiceUrl(
 					before: '<button class="small-expand" href="',
-					after: '"><font>{%DownloadInvoice}</font></button>'
+					after: '"><span>{%DownloadInvoice}</span></button>'
 				)}
-				{OrderDownloadReceiptURL(
+				{OrderReceiptUrl(
 					before: '<button class="small-expand" href="',
-					after: '"><font>{%DownloadReceipt}</font></button>'
+					after: '"><span>{%DownloadReceipt}</span></button>'
 				)}
 			{{/ifpage}}
 			{{#ifpage 'cart' 'cart-reminder'}}
 				<button href="{CartShareLink}" class="small-expand">
-					<font>{%CartEmailHtmlLink}</font>
+					<span>{%CartEmailHtmlLink}</span>
 				</button>
 			{{/ifpage}}
 			{{#ifpage 'payment-notification'}}
 				{TransactionPaymentLink(
 					before: '<button class="small-expand" href="',
-					after: '"><font>{%PaymentTransactionLinkText}</font></button>'
+					after: '"><span>{%PaymentTransactionLinkText}</span></button>'
 				)}
 			{{/ifpage}}
 			{{#ifpage 'shipping-confirmation'}}
 				{OrderTrackingUrl(
 					before: '<button class="small-expand" href="',
-					after: '"><font>{%TrackOrder}</font></button>'
+					after: '"><span>{%TrackOrder}</span></button>'
 				)}
 			{{/ifpage}}
 	</container>

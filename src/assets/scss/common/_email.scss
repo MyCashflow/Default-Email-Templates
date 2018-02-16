@@ -46,7 +46,7 @@ table.button {
 }
 
 .button a {
-	&, &:hover, &:link, &:visited, font {
+	&, &:hover, &:link, &:visited, span {
 		color: text-contrast($primary-color);
 		text-decoration: none;
 	}
@@ -60,6 +60,8 @@ hr {
 	background: $color-body-border;
 	border: 0;
 	height: 1px;
+	Margin: 5px 0;
+	margin: 5px 0;
 }
 
 // -----------------------------------------------------------------------------
