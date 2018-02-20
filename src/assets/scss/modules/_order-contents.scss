@@ -15,8 +15,6 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 }
 
 .ProductRow th.Image {
-	background: #ffffff;
-	border: 1px solid $color-image-border;
 	text-align: center;
 	vertical-align: middle;
 	width: 60px;
@@ -29,6 +27,8 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 }
 
 .ProductRow th.Image img {
+	background: #ffffff;
+	border: 1px solid $color-image-border;
 	Margin: 0 auto;
 	margin: 0 auto;
 	width: 50px;
