@@ -3,10 +3,12 @@
 // -----------------------------------------------------------------------------
 
 .wrapper.ProductHero h3 {
-	text-align: center !important;
+	text-align: center;
 }
 
-.wrapper.ProductHero h3 a {
+.wrapper.ProductHero h3 a,
+.wrapper.ProductHero h3 a span {
+	color: $primary-color;
 	text-decoration: none;
 }
 
@@ -18,14 +20,17 @@
 	margin: 0 auto;
 }
 
-.ImageFrame,
-.ImageFrame.Max {
+.ImageFrame {
 	background: #ffffff;
 	border: 1px solid $color-image-border;
 	border-radius: $global-radius;
+	padding: $padding-image;
+}
+
+.ImageFrame,
+.ImageFrame.Max {
 	box-sizing: border-box;
 	display: block;
-	padding: $padding-image;
 }
 
 .ImageFrame.Medium img {
@@ -34,4 +39,14 @@
 
 .ImageFrame.Small img {
 	width: 50px;
+}
+
+// -----------------------------------------------------------------------------
+// Responsiveness
+// -----------------------------------------------------------------------------
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.wrapper.ProductHero .ImageFrame img {
+		width: 100% !important;
+	}
 }
