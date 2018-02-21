@@ -1,97 +1,204 @@
+$product-spacing:					($grid-list-gutter / 2) !default;
 
-$product-row-image-size:			45px;
+// -----------------------------------------------------------------------------
+// Cart or order content
+// -----------------------------------------------------------------------------
 
-.ProductRow p {
-	margin: 0;
+.ProductRow th {
+	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.ProductRow > tbody > tr > th {
-	padding: 0 ($global-gutter / 2) !important;
+.ProductRow th.Spacer {
+	width: $product-spacing;
+}
+
+.ProductRow th.Image {
+	text-align: center;
+	vertical-align: middle;
+	width: 60px;
+}
+
+.ProductRow th.Image a {
+	display: block;
+	Margin: 4px;
+	margin: 4px;
+}
+
+.ProductRow th.Image img {
+	background: #ffffff;
+	border: 1px solid $color-image-border;
+	Margin: 0 auto;
+	margin: 0 auto;
+	width: 50px;
+}
+
+.ProductRow th.Name {
 	vertical-align: middle;
 }
 
-.ProductRow th.ProductImage {
-	padding: 0 !important;
-	width: $product-row-image-size;
+.ProductRow th.Unit {
+	vertical-align: middle;
+	width: 23%;
 }
 
-.ProductRow th.ProductImage img {
-	background: #ffffff;
-	border: 1px solid #e0e0e0;
-	border-radius: $global-radius;
-	padding: 2px;
-	width: 45px;
+.ProductRow th.Total {
+	padding: 0;
+	padding-right: 0;
+	vertical-align: middle;
+	width: 100px;
 }
 
-.QtyTimes {
-	margin-left: 0.75em;
+.ProductRow .Unit .Price {
+	text-align: right;
+	width: 55%;
 }
 
-.OrderTotalsFrame {
-	margin-top: $global-gutter;
+.ProductRow .Unit .QtyTimes {
+	padding: 0 7px;
+	text-align: center;
+	width: 15px;
 }
 
-
-@media only screen and (max-width: #{$global-breakpoint}) {
-	.ProductRow th.ProductImage {
-		display: block !important;
-		margin: 0px auto $global-gutter auto !important;
-		width: 150px !important;
-	}
-
-	.ProductRow th.ProductImage img {
-		width: 150px !important;
-	}
-
-	.ProductRow {
-		margin: ($global-gutter * 2) 0;
-	}
-
-	.ProductRow td,
-	.ProductRow th {
-		text-align: center !important;
-	}
-
-	.OrderTotalsFrame {
-		margin-top: 0 !important;
-	}
-
-	.QtyTimes {
-		margin-left: 0.25em !important;
-		margin-right: 0.25em;
-	}
+.ProductRow .Unit .Quantity {
+	padding: 0 $product-spacing 0 0;
 }
 
+// -----------------------------------------------------------------------------
+// Single row elements
+// -----------------------------------------------------------------------------
 
-
-
-.OrderTotalsFrame > table th {
-	padding: 0 !important;
+.ProductRow .Name a,
+.ProductRow .Name a span {
+	color: $color-text-dark;
+	font-weight: bold;
+	line-height: 1.3em;
+	text-decoration: none;
 }
 
-.OrderTotalsFrame hr {
-	margin: 10px 0 0;
+.Variation,
+.DeliveryDate,
+.Download {
+	display: block;
+	line-height: 1.1em;
+	padding-top: 4px;
 }
 
+.Variation {
+	color: lighten($color-text-dark, 15%);
+	font-size: $font-size-small;
+}
 
-.OrderTotalsFrame table.OrderTotalTable th {
-	padding-right: ($global-gutter / 2) !important;
+.DeliveryDate {
+	color: lighten($color-text-dark, 15%);
+	font-size: $font-size-small;
+}
+
+// -----------------------------------------------------------------------------
+// Order total section
+// -----------------------------------------------------------------------------
+
+table.ProductsTotal {
+	width: 100%;
+}
+
+.ProductsTotal .ProductsTotalRowSeparator hr {
+	margin: ($grid-list-gutter / 2) 0;
+}
+
+.ProductsTotal th {
+	padding-right: $grid-list-gutter;
 	text-align: right;
 }
 
-.OrderTotalsFrame table td {
-	width: 35%;
+.ProductsTotal th.Spacer {
+	width: 30%;
 }
 
-.Total th,
-.Total td {
-	font-size: 120%;
+.ProductsTotal .Subtotal td {
 	font-weight: bold;
-	padding-top: 10px;
+	width: 100px;
 }
 
-.TotalTax th,
-.TotalTax td {
-	font-size: 80%;
-	color: #888888;
+.ProductsTotal .ProductsTotal th,
+.ProductsTotal .ProductsTotal td {
+	font-size: $font-size-large;
+	font-weight: bold;
+}
+
+.ProductsTotal .ProductsTotalTax th,
+.ProductsTotal .ProductsTotalTax td {
+	color: lighten($color-text-dark, 25%);
+	font-size: $font-size-small;
+	line-height: 1.2em;
+}
+
+// -----------------------------------------------------------------------------
+// Reponsiveness
+// -----------------------------------------------------------------------------
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+
+	.ProductTable {
+		margin: ($grid-gutter * 1.1) 0 $grid-gutter 0 !important;
+	}
+
+	.ProductRow th,
+	.ProductRow td {
+		margin: 0;
+		padding: 0;
+	}
+
+	.ProductRow th {
+		text-align: center !important;
+		width: 100% !important;
+	}
+
+	.ProductRow th.Image {
+		background: none !important;
+		border: 0 !important;
+		padding-bottom: $grid-gutter !important;
+	}
+
+	.ProductRow .Image a img {
+		background: #ffffff !important;
+		border: 1px solid $color-image-border !important;
+		padding: 4px !important;
+		width: 150px !important;
+	}
+
+	.ProductRow table {
+		margin: $grid-list-gutter auto 0 auto !important;
+		width: auto !important;
+	}
+
+	.ProductRow table th {
+		padding: 0 3px !important;
+		width: auto !important;
+	}
+
+	.ProductsTotal {
+		margin: $grid-gutter 0 !important;
+		width: 100% !important;
+	}
+
+	.ProductsTotal th.Spacer {
+		display: none !important;
+		width: 0% !important;
+	}
+
+	.ProductsTotal .Subtotal td {
+		width: 35% !important;
+	}
+
+	.ProductsTotal .Subtotal th {
+		font-weight: bold !important;
+	}
+
+	.ProductsTotal .Subtotal th span {
+		display: block;
+		font-size: $font-size-small;
+		font-weight: normal;
+	}
 }

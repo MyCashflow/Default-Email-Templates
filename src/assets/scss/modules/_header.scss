@@ -10,8 +10,12 @@
 	padding: 0;
 }
 
+.Header .ShopLogo {
+	display: inline-block;
+}
+
 .Header .ShopLogo img {
 	height: auto;
 	max-height: 50px;
-	max-width: 250px;
+	max-width: 300px;
 }

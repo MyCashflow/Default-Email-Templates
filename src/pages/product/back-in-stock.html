@@ -1,40 +1,30 @@
+---
+subject: '{OrderEmailTitle}'
+---
+
 {{> header }}
 
 <wrapper class="Primary">
 	<spacer size="10"></spacer>
-	<container>
-		<row>
-			<columns large="12">
-				{{> greeting }}
-				{EmailMessage}
-			</columns>
-		</row>
+	<container class="Block">
+		{{> greeting }}
+		{EmailMessage}
 	</container>
 	<spacer size="20"></spacer>
 </wrapper>
 
 <wrapper class="Primary ProductHero">
 	<spacer size="10"></spacer>
-	<container>
-		<row>
-			<columns large="12">
-				<center>
-					<a href="{ProductURL}" class="ProductImage Medium">
-						<div class="Square">
-							<div class="Square before"></div>
-							<div class="Square-Content">
-								<wrapper>
-									<img src="{ProductImageURL}" alt="{ProductName}" />
-								</wrapper>
-							</div>
-						</div>
-					</a>
-					<h3><a href="{ProductURL}">{ProductName}</a></h3>
-				</center>
-			</columns>
-		</row>
+	<container class="Block">
+		<div>
+			<a href="{ProductURL}" class="ImageFrame ProductImage Big">
+				<img src="{ProductImageURL(width: 600, height: 600, link: false)}" alt="{ProductName}" width="590" />
+			</a>
+		</div>
+		<h3><a href="{ProductURL}"><span>{ProductName}</span></a></h3>
 	</container>
 	<spacer size="20"></spacer>
 </wrapper>
 
+{{> contact }}
 {{> footer }}

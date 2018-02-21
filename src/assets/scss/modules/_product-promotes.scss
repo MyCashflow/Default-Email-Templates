@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// Product promotes
+// -----------------------------------------------------------------------------
+
+table.container.PromotedProducts {
+	max-width: $global-width + ($grid-gutter * 2);
+	width: $global-width + ($grid-gutter * 2);
+}
+
+.PromotedProduct {
+	width: 160px;
+}
+
+.PromotedProduct .ImageFrame {
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto ($grid-list-gutter / 2) auto;
+	width: 160px;
+}
+
+.PromotedProduct h3 {
+	margin: 0;
+}
+
+.PromotedProduct h3 a,
+.PromotedProduct h3 a span {
+	color: $color-text-dark;
+	font-size: $font-size;
+	line-height: 1.3em;
+	text-decoration: none;
+}
+
+.PromotedProduct .Price {
+	color: $color-accent-1;
+	font-weight: bold;
+}
+
+// -----------------------------------------------------------------------------
+// Responsiveness
+// -----------------------------------------------------------------------------
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.PromotedProduct {
+		margin: $grid-list-gutter 0 !important;
+		width: 100% !important;
+	}
+
+	.PromotedProduct .ImageFrame {
+		margin: 0 auto $grid-list-gutter auto !important;
+	}
+
+	.PromotedProduct h3,
+	.PromotedProduct .Price {
+		display: block !important;
+		margin: 0;
+		text-align: center !important;
+	}
+}

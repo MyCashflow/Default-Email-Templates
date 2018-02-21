@@ -13,9 +13,7 @@ subject: '{OrderEmailTitle}'
 			{%CartEmailHtmlMessage}
 		</p>
 		{CartShareMessage(
-			before: '<spacer size="20"></spacer>
-				<h3>{%CartEmailHtmlMessageLeft}</h3>
-				<p>',
+			before: '<h3>{%CartEmailHtmlMessageLeft}</h3><p>',
 			after: '</p>'
 		)}
 	</container>
@@ -24,6 +22,5 @@ subject: '{OrderEmailTitle}'
 
 {{> toolbox }}
 {{> cart-contents }}
-{{> promote-newproducts }}
 {{> contact }}
 {{> footer }}

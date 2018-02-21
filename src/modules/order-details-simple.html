@@ -1,8 +1,8 @@
 <wrapper class="Light">
 	<spacer size="30"></spacer>
 	<container>
-		<row>
-			<columns large="4">
+		<row class="NoMargin">
+			<columns large="6">
 				<h3>{%OrderInformation}</h3>
 				<p>
 					{OrderDate(
@@ -38,19 +38,6 @@
 						after: '</span><br />'
 					)}
 				</p>
-			</columns>
-			<columns large="4">
-				<h3>{%CheckoutCustomerInformation}</h3>
-				{OrderCustomerInformation(
-					before: '<p>',
-					after: '</p>'
-				)}
-			</columns>
-			<columns large="4">
-				{OrderShippingInformation(
-					before: '<h3>{%CheckoutShippingInformation}</h3><p>',
-					after: '</p>'
-				)}
 			</columns>
 		</row>
 	</container>

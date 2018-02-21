@@ -1,6 +1,6 @@
 ---
 layout: index-layout
-subject: MyCashflow email templates
+subject: MyCashflow Emails
 ---
 
 <spacer size="16"></spacer>
@@ -9,22 +9,55 @@ subject: MyCashflow email templates
 	<row>
 		<columns small="12">
 			<spacer size="16"></spacer>
-			<center>
-				<menu class="vertical">
-					<item href="{{root}}simple.html" target="_blank">
-						Simple</item>
-					<item href="{{root}}cart.html" target="_blank">
-						Ostoskori</item>
-					<item href="{{root}}order.html" target="_blank">
-						Yleinen tilausviestipohja</item>
-					<item href="{{root}}order/cancelled.html" target="_blank">
-						Peruttu tilaus</item>
-					<item href="{{root}}order/payment-notification.html" target="_blank">
-						Odotamme maksuasi -ilmoitus</item>
-					<item href="{{root}}product/back-in-stock.html" target="_blank">
-						Tuotetta varastossa</item>
-				</menu>
-			</center>
+
+			<h3>Yleiset</h3>
+			<hr />
+			<menu class="vertical">
+				<item href="{{root}}simple.html" target="_blank">
+					Simple</item>
+				<item href="{{root}}newsletter/default.html" target="_blank">
+					Uutiskirje</item>
+				<item href="{{root}}product/back-in-stock.html" target="_blank">
+					Tuotetta varastossa</item>
+			</menu>
+			<spacer size="24"></spacer>
+
+			<h3>Ostoskorit</h3>
+			<hr />
+			<menu class="vertical">
+				<item href="{{root}}cart.html" target="_blank">
+					Ostoskori</item>
+				<item href="{{root}}cart-reminder.html" target="_blank">
+					Ostoskori-muistutus</item>
+			</menu>
+			<spacer size="24"></spacer>
+
+			<h3>Tilaukset</h3>
+			<hr />
+			<menu class="vertical">
+				<item href="{{root}}order.html" target="_blank">
+					Yleinen tilausviestipohja</item>
+				<item href="{{root}}order/cancelled.html" target="_blank">
+					Peruttu tilaus</item>
+				<item href="{{root}}order/payment-notification.html" target="_blank">
+					Odotamme maksuasi -ilmoitus</item>
+				<item href="{{root}}order/shipping-notification.html" target="_blank">
+					Toimitus viivästyy</item>
+				<item href="{{root}}order/shipping-confirmation.html" target="_blank">
+					Tilaus toimitettu</item>
+				<item href="{{root}}order/messages.html" target="_blank">
+					Viesti</item>
+			</menu>
+			<spacer size="24"></spacer>
+
+			<h3>Asiakkuus</h3>
+			<hr />
+			<menu class="vertical">
+				<item href="{{root}}customer/registered.html" target="_blank">
+					Rekisteröityminen</item>
+			</menu>
+			<spacer size="24"></spacer>
+
 			<spacer size="16"></spacer>
 		</columns>
 	</row>

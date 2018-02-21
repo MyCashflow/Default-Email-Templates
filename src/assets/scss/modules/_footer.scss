@@ -15,6 +15,11 @@
 	line-height: 13px;
 }
 
+.wrapper.Legal a {
+	color: lighten($global-font-color, 40%);
+	text-decoration: underline;
+}
+
 // -----------------------------------------------------------------------------
 // Powered by MyCashflow -text
 // -----------------------------------------------------------------------------

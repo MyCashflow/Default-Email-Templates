@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// Module: messages
+// -----------------------------------------------------------------------------
+
+.wrapper.OrderMessages {
+	border-bottom: 3px solid $color-body-border;
+}
+
+table.TimelineTitle {
+	Margin: 0;
+	margin: 0;
+}
+
+table.TimelineTitle td {
+	border: 3px solid $color-body-border;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+table.TimelineTitle td h6 {
+	font-weight: normal;
+	Margin: 0;
+	Margin-bottom: 0;
+	Margin-top: 0;
+	margin: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+blockquote.TimelineMessage {
+	border-left: 3px solid $color-body-border;
+	Margin: 0;
+	margin: 0;
+	Margin-left: $grid-list-gutter;
+	margin-left: $grid-list-gutter;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: $grid-list-gutter;
+	padding-right: $grid-list-gutter;
+}
+
+.TimelineBreak {
+	Margin-bottom: 3px;
+	margin-bottom: 3px;
+}
+
+blockquote.TimelineMessage.Dot {
+	Margin-top: 3px;
+	margin-top: 3px;
+	height: 3px;
+}

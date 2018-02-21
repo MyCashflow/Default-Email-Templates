@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .container {
+	background: $body-background;
 	max-width: $global-width;
 }
 
@@ -27,27 +28,30 @@
 	background: $light-gray;
 }
 
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.wrapper-inner {
+		padding: 0 ($global-gutter / 2) !important;
+	}
+}
+
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
 
-a.Button {
-	background: $primary-color;
-	border-radius: $global-radius;
-	color: #ffffff;
-	display: inline-block;
-	margin-bottom: ($global-gutter / 2);
-	padding: 8px 18px;
-	text-align: center;
-	text-decoration: none;
-	vertical-align: middle;
+table.button {
+	Margin: 0;
+	margin: 0;
 }
 
-@media only screen and (max-width: #{$global-breakpoint}) {
-	a.Button {
-		box-sizing: border-box;
-		display: block;
-		width: 100%;
+table.button table td {
+	border-radius: $button-radius;
+	border: 0;
+}
+
+.button a {
+	&, &:hover, &:link, &:visited, span {
+		color: text-contrast($primary-color);
+		text-decoration: none;
 	}
 }
 
@@ -56,43 +60,25 @@ a.Button {
 // -----------------------------------------------------------------------------
 
 hr {
+	background: $color-body-border;
 	border: 0;
 	height: 1px;
-	background: #e0e0e0;
+	Margin: 5px 0;
+	margin: 5px 0;
 }
 
-.ProductImage {
-	margin: 0 auto;
+// -----------------------------------------------------------------------------
+// Text aligment
+// -----------------------------------------------------------------------------
+
+.Text-Left {
+	text-align: left;
 }
 
-.ProductImage.Small {
-	max-width: 50px;
+.Text-Center {
+	text-align: center;
 }
 
-.ProductImage.Medium {
-	max-width: 250px;
-}
-
-.ProductImage.Big {
-	width: 100%;
-}
-
-.ProductImage .wrapper {
-	width: 100%;
-	height: 100%;
-}
-
-.ProductImage .wrapper td {
-	border: 1px solid $color-image-border;
-	border-radius: $global-radius !important;
-	padding: $padding-image;
-	vertical-align: middle;
-}
-
-.ProductImage img {
-	border: 0;
-	height: auto !important;
-	width: 100%;
-	max-width: 100% !important;
-	max-height: 100% !important;
+.Text-Right {
+	text-align: right;
 }

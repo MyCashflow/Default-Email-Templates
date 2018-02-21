@@ -1,0 +1,59 @@
+---
+subject: '{OrderEmailTitle}'
+---
+
+{{> header }}
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container class="Block">
+		<h1>{{ subject }}</h1>
+		<p>{{> greeting }} {%EmailTextOrderUpdated}</p>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+<wrapper class="Primary OrderMessages">
+	<spacer size="10"></spacer>
+	<container class="Block">
+		<div class="TimelineEvents">
+			{OrderComments(from: 'admin', limit: 1, helper: 'emails/helpers/order-comment')}
+			{OrderComments(start: 1, limit: 4, helper: 'emails/helpers/order-comment')}
+			<div class="TimelineBreak">
+				<blockquote class="TimelineMessage Dot">
+					<spacer size="3"></spacer>
+				</blockquote>
+				<blockquote class="TimelineMessage Dot">
+					<spacer size="3"></spacer>
+				</blockquote>
+				<blockquote class="TimelineMessage Dot">
+					<spacer size="3"></spacer>
+				</blockquote>
+			</div>
+			<blockquote class="TimelineMessage">
+				<spacer size="15"></spacer>
+			</blockquote>
+			<table class="TimelineTitle">
+				<tbody>
+					<tr>
+						<td>
+							<h6>
+								{%Ordernumber}
+								<strong>#{OrderNumber}</strong>,
+								{OrderDate}
+							</h6>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<blockquote class="TimelineMessage">
+				<spacer size="35"></spacer>
+			</blockquote>
+		</div>
+	</container>
+</wrapper>
+
+{{> order-contents }}
+{{> order-details }}
+{{> contact }}
+{{> footer }}

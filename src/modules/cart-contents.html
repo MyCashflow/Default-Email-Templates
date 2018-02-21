@@ -1,0 +1,62 @@
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		<h1>{%CheckoutOrderContent}</h1>
+		{CartProducts(
+			before: '<hr />',
+			helper: 'emails/helpers/cart-product'
+		)}
+		<spacer size="30"></spacer>
+		<table class="ProductsTotal">
+			<tr class="Subtotal">
+				<th class="Spacer"></th>
+				<th>{%CheckoutProductsTotal}</th>
+				<td><strong>{CartSubTotal}</strong></td>
+			</tr>
+			{CartShippingCosts(
+				before: '
+				<tr class="Subtotal ShippingCosts">
+					<th class="Spacer"></th>
+					<th>
+						{%ShippingCosts}
+						{CartShippingMethod(before: '<span>(', after: ')</span>')}
+					</th>
+					<td><strong>',
+				after: '</strong>
+					</td>
+				</tr>'
+			)}
+			{CartPaymentCosts(
+				before: '
+				<tr class="Subtotal PaymentCosts">
+					<th class="Spacer"></th>
+					<th>
+						{%PaymentCosts}
+						{CartPaymentMethod(before: '<span>(', after: ')</span>')}
+					</th>
+					<td><strong>',
+				after: '</strong>
+					</td>
+				</tr>'
+			)}
+			<tr class="ProductsTotalRowSeparator">
+				<th class="Spacer"></th>
+				<td colspan="2">
+					<hr />
+				</td>
+			</tr>
+			<tr class="ProductsTotal">
+				<th class="Spacer"></th>
+				<th>{%Total}</th>
+				<td><strong>{CartTotal}</strong></td>
+			</tr>
+			<tr class="ProductsTotalTax">
+				<th class="Spacer"></th>
+				<th>{%TotalTax}</th>
+				<td>{CartTax}</td>
+			</tr>
+		</table>
+		<spacer size="30"></spacer>
+	</container>
+	<spacer size="10"></spacer>
+</wrapper>

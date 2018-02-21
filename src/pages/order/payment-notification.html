@@ -1,28 +1,28 @@
-{{> header}}
+---
+subject: '{OrderEmailTitle}'
+---
+
+{{> header }}
 
 <wrapper class="Primary">
 	<spacer size="10"></spacer>
-	<container>
-		<row>
-			<columns large="12">
-				<h1>{OrderEmailTitle}</h1>
-				<p>
-					{{> greeting }}
-					{%EmailTextPaymentNotification}
-				</p>
-				{PaymentMethodInstructions(
-					before: '<p>',
-					after: '</p>'
-				)}
-			</columns>
-		</row>
+	<container class="Block">
+		<h1>{OrderEmailTitle}</h1>
+		<p>
+			{{> greeting }}
+			{%EmailTextPaymentNotification}
+		</p>
+		{PaymentMethodInstructions(
+			before: '<p>',
+			after: '</p>'
+		)}
 	</container>
 	<spacer size="20"></spacer>
 </wrapper>
 
 <wrapper class="Primary">
 	<container>
-		<row>
+		<row class="NoMargin">
 			<columns>
 				<strong>{%PaymentReference}</strong><br />
 				{OrderPaymentReference}
@@ -40,8 +40,8 @@
 	<spacer size="20"></spacer>
 </wrapper>
 
-{{> toolbox}}
-{{> order-contents}}
-{{> order-details}}
-{{> contact}}
-{{> footer}}
+{{> toolbox }}
+{{> order-contents }}
+{{> order-details }}
+{{> contact }}
+{{> footer }}

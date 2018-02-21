@@ -1,0 +1,20 @@
+{NewProducts(
+	limit: 3,
+	timelimit: '-4 months',
+	sort: 'random',
+	type: 'normal',
+	before: '
+		<wrapper class="Secondary Light">
+			<spacer size="30"></spacer>
+			<container class="Block">
+				<h2>{%NewProducts}</h2>
+			</container>
+			<container class="PromotedProducts">
+				<row>',
+	helper: 'emails/helpers/email-product',
+	after: '
+				</row>
+			</container>
+			<spacer size="40"></spacer>
+		</wrapper>'
+)}
