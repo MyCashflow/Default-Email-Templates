@@ -22,6 +22,10 @@
 				</button>
 			{{/ifpage}}
 			{{#ifpage 'payment-notification'}}
+				{OrderInvoiceUrl(
+					before: '<button class="small-expand" href="',
+					after: '"><span>{%DownloadInvoice}</span></button>'
+				)}
 				{TransactionPaymentLink(
 					before: '<button class="small-expand" href="',
 					after: '"><span>{%PaymentTransactionLinkText}</span></button>'
@@ -31,6 +35,10 @@
 				{OrderTrackingUrl(
 					before: '<button class="small-expand" href="',
 					after: '"><span>{%TrackOrder}</span></button>'
+				)}
+				{OrderReceiptUrl(
+					before: '<button class="small-expand" href="',
+					after: '"><span>{%DownloadReceipt}</span></button>'
 				)}
 			{{/ifpage}}
 	</container>
