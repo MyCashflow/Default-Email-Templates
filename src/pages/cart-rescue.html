@@ -10,12 +10,14 @@ subject: '{OrderEmailTitle}'
 		<h1>{%CartRescueEmailHeader}</h1>
 		<p>
 			{%CartRescueEmailMessage}
-			<button href="{CartRescueLinkUrl}" class="small-expand">
-				<span>{%CartRescueEmailLink}</span>
-			</button>
 		</p>
+		<spacer size="20"></spacer>
+		<button href="{CartRescueLinkUrl(after: '?utm_source=cart_resume&amp;utm_medium=email')}" class="small-expand">
+			<span>{%CartRescueEmailLink}</span>
+		</button>
+		<spacer size="20"></spacer>
 	</container>
-	<spacer size="20"></spacer>
+	
 </wrapper>
 
 {{> cart-contents }}
