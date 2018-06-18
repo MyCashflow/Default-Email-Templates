@@ -26,9 +26,8 @@
 					before: '<button class="small-expand" href="',
 					after: '"><span>{%DownloadInvoice}</span></button>'
 				)}
-				{TransactionPaymentLink(
-					before: '<button class="small-expand" href="',
-					after: '"><span>{%PaymentTransactionLinkText}</span></button>'
+				{OrderPaymentTransactions(
+					helper: 'emails/helpers/order-payment-link'
 				)}
 			{{/ifpage}}
 			{{#ifpage 'shipping-confirmation'}}
