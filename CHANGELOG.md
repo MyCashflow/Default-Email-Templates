@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.4] - 2018-07-05
 ### Added
 - Add order comments section to order details simple module
-- Support for a new command `watch` to the devkit
+- Support for a new command `watch`
 
 ## [1.0.3] - 2018-06-18
 ### Fixed
