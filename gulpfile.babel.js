@@ -18,8 +18,12 @@ gulp.task('build',
 	gulp.series(clean, pages, sass, inline));
 
 // Build emails, run the server, and watch for file changes
-gulp.task('default',
+gulp.task('watch',
 	gulp.series('build', server, watch));
+
+// Default (fallback for the watch command)
+gulp.task('default',
+	gulp.series('watch'));
 
 // Delete the "dist" folder
 // This happens every time a build starts
