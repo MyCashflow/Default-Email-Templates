@@ -23,11 +23,7 @@
 		{{/ifpage}}
 		{{#ifpage 'cart-recovery'}}
 			<button href="{CartRecoveryUrl(after: '?utm_source=cart_recovery&amp;utm_medium=email')}" class="small-expand">
-				{CartRecoveryCampaignCode(
-					before: '<span>{%CartRecoveryEmailDiscountLinkText}</span><span style="display: none;">',
-					after: '</span>',
-					or: '<span>{%CartRecoveryEmailLinkText}</span>'
-				)}
+				<span>{%CartRecoveryEmailLinkText}</span>
 			</button>
 		{{/ifpage}}
 		{{#ifpage 'payment-notification'}}
