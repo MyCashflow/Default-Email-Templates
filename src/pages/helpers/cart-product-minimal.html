@@ -9,7 +9,7 @@
 			<th class="Spacer small-12 columns"></th>
 			<th class="Name small-12 columns">
 				<div class="ProductName">
-					<a href="{ProductURL(or: '#product' )}"><span>{ProductName}</span></a>
+					<span>{CartProductName}</span>
 				</div>
 				{CartProductVariation(before:'<div class="Variation">',after:'</div>')}
 			</th>
@@ -17,14 +17,11 @@
 			<th class="Unit small-12 columns">
 				<table>
 					<tr>
-						<th class="Price">{CartProductPrice}</th>
 						<th class="QtyTimes"><strong>&times;</strong></th>
 						<th class="Quantity">{CartProductQuantity(mode: 'preview')}</th>
 					</tr>
 				</table>
 			</th>
-			<th class="Spacer small-12 columns"></th>
-			<th class="Total small-12 columns last"><strong>{CartProductTotal}</strong></th>
 		</tr>
 	</tbody>
 </table>

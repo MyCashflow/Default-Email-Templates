@@ -1,0 +1,12 @@
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		<h1>{%ShoppingCartContents}</h1>
+		{CartProducts(
+			before: '<hr />',
+			helper: 'emails/helpers/cart-product-minimal'
+		)}
+		<spacer size="30"></spacer>
+	</container>
+	<spacer size="10"></spacer>
+</wrapper>

@@ -1,5 +1,5 @@
 ---
-subject: '{%CartRecoverySubject}'
+subject: '{%CartRecoveryEmailSubject}'
 ---
 
 {{> header }}
@@ -7,20 +7,22 @@ subject: '{%CartRecoverySubject}'
 <wrapper class="Primary">
 	<spacer size="10"></spacer>
 	<container class="Block">
-		<h1>{%CartRecoveryHeader}</h1>
+		<h1>{%CartRecoveryEmailHeader}</h1>
 		{CartRecoveryMessage(
-			or: '<p>{%CartRecoveryMessage}</p>'
+			before: '<p>',
+			after: '</p>',
+			or: '<p>{%CartRecoveryEmailHtmlMessage}</p>'
 		)}
-		<spacer size="20"></spacer>
-		<button href="{CartRecoveryUrl(after: '?utm_source=cart_recovery&amp;utm_medium=email')}" class="small-expand">
-			<span>{%CartRecoveryLink}</span>
-		</button>
-		<spacer size="20"></spacer>
+		{CartRecoveryCampaignCode(
+			before: '{%CartRecoveryEmailSubmitDiscount} <strong>',
+			after: '</strong>'
+		)}
 	</container>
-	
+	<spacer size="20"></spacer>
 </wrapper>
 
-{{> cart-contents }}
+{{> toolbox }}
+{{> cart-contents-minimal }}
 {{> contact }}
 {{> unsubscribe }}
 {{> footer }}
