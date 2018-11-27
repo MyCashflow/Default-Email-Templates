@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2018-11-23
+### Fixed
+- Email link from the contact module
+
 ## [1.0.4] - 2018-07-05
 ### Added
 - Add order comments section to order details simple module
