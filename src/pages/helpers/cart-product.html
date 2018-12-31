@@ -12,6 +12,11 @@
 					<a href="{ProductURL(or: '#product' )}"><span>{ProductName}</span></a>
 				</div>
 				{CartProductVariation(before:'<div class="Variation">',after:'</div>')}
+				{CartProductChoices(
+					wrap: 'false',
+					before: '<dl class="ProductChoises">',
+					after: '</dl>'
+				)}
 			</th>
 			<th class="Spacer small-12 columns"></th>
 			<th class="Unit small-12 columns">
