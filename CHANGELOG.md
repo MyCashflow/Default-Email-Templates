@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - 2018-12-31
+### Added
+- Add missing ProductChoices tags
+
+## [1.0.6] - 2018-12-17
+### Added
+- Add download invoice button to the shipping-confirmation
+
 ## [1.0.5] - 2018-11-23
 ### Fixed
 - Email link from the contact module
