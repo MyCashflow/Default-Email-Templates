@@ -96,6 +96,13 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 	font-size: $font-size-small;
 }
 
+dl.ProductChoices {
+	color: lighten($color-text-dark, 15%);
+	font-size: $font-size-small;
+	margin: 0;
+	padding-top: 2px;
+}
+
 // -----------------------------------------------------------------------------
 // Order total section
 // -----------------------------------------------------------------------------
