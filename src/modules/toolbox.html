@@ -2,6 +2,11 @@
 	<spacer size="10"></spacer>
 	<container class="Block">
 		{{#ifpage 'order'}}
+			{OrderPaymentTransactions(
+				before: '<h3>{%PaymentTransactionLinkHeader}</h3>',
+				helper: 'emails/helpers/order-payment-link',
+				after: '<spacer size="10"></spacer><hr /><spacer size="10"></spacer>'
+			)}
 			<button class="small-expand" href="{ShopUrl}/orderstatus/">
 				<span>
 					{%Ordertracking}
@@ -27,12 +32,14 @@
 			</button>
 		{{/ifpage}}
 		{{#ifpage 'payment-notification'}}
+			{OrderPaymentTransactions(
+				before: '<h3>{%PaymentTransactionLinkHeader}</h3>',
+				helper: 'emails/helpers/order-payment-link',
+				after: '<spacer size="20"></spacer>'
+			)}
 			{OrderInvoiceUrl(
 				before: '<button class="small-expand" href="',
 				after: '"><span>{%DownloadInvoice}</span></button>'
-			)}
-			{OrderPaymentTransactions(
-				helper: 'emails/helpers/order-payment-link'
 			)}
 		{{/ifpage}}
 		{{#ifpage 'shipping-confirmation'}}
