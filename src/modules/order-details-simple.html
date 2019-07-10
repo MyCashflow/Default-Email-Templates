@@ -17,18 +17,6 @@
 						before: '<strong>{%CustomerNumber}</strong>&nbsp;<span>',
 						after: '</span><br />'
 					)}
-					{OrderPaymentReference(
-						before: '<strong>{%PaymentReference}</strong>&nbsp;<span>',
-						after: '</span><br />'
-					)}
-					{OrderOpenTotal(
-						before: '<strong>{%OrderOpenTotal}</strong>&nbsp;<span>',
-						after: '</span><br />'
-					)}
-					{OrderPaymentMethod(
-						before: '<strong>{%PaymentMethod}</strong>&nbsp;<span>',
-						after: ', {OrderPaymentStatus}</span><br />'
-					)}
 					{OrderShippingMethod(
 						before: '<strong>{%CheckoutShipping}</strong>&nbsp;<span>',
 						after: '</span><br />'
@@ -36,6 +24,17 @@
 					{OrderTrackingCode(
 						before: '<strong>{%TrackingCode}</strong>&nbsp;<span>',
 						after: '</span><br />'
+					)}
+				</p>
+				<spacer size="10"></spacer>
+				<h3>{%OrderPaymentTransactions}</h3>
+				<p>
+					{OrderOpenTotal(
+						before: '<strong>{%OrderOpenTotal}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderPaymentTransactions(
+						helper: 'emails/helpers/order-payment-transaction'
 					)}
 				</p>
 				{OrderComments(

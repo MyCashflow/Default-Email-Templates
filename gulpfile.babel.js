@@ -15,7 +15,7 @@ const $ = plugins();
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-	gulp.series(clean, pages, sass, inline));
+	gulp.series(clean, pages, sass, inline, copyThemeFile));
 
 // Build emails, run the server, and watch for file changes
 gulp.task('watch',
@@ -97,6 +97,11 @@ function server(done) {
 		server: 'dist'
 	});
 	done();
+}
+
+function copyThemeFile() {
+	return gulp.src('theme.xml')
+		.pipe(gulp.dest('dist'));
 }
 
 // Watch for file changes
