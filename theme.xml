@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Theme>
 	<Features>
+		<FallbackTheme code="system/mycashflow-2018"/>
 		<GiftCards supported="true" />
 	</Features>
 </Theme>
