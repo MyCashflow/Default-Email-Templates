@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2019-07-10
+### Added
+- Add theme.xml file.
+- Show more details about order's payment transactions.
+
 ## [1.0.7] - 2018-12-31
 ### Added
 - Add missing ProductChoices tags
