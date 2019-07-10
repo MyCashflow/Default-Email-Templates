@@ -6,20 +6,18 @@
 			before: '<hr />',
 			helper: 'emails/helpers/order-product'
 		)}
-		<spacer size="30"></spacer>
+		<spacer size="10"></spacer>
 		<table class="ProductsTotal">
 			<tr class="Subtotal">
-				<th class="Spacer"></th>
 				<th>{%CheckoutProductsTotal}</th>
 				<td><strong>{OrderSubTotal}</strong></td>
 			</tr>
 			{OrderShippingCosts(
 				before: '
 				<tr class="Subtotal ShippingCosts">
-					<th class="Spacer"></th>
 					<th>
-						{%ShippingCosts}
-						{OrderShippingMethod(before: '<span>(', after: ')</span>')}
+						{%ShippingCosts}:
+						{OrderShippingMethod(before: '<span>', after: '</span>')}
 					</th>
 					<td><strong>',
 				after: '</strong>
@@ -29,10 +27,9 @@
 			{OrderPaymentCosts(
 				before: '
 				<tr class="Subtotal PaymentCosts">
-					<th class="Spacer"></th>
 					<th>
-						{%PaymentCosts}
-						{OrderPaymentMethod(before: '<span>(', after: ')</span>')}
+						{%PaymentCosts}:
+						{OrderPaymentMethod(before: '<span>', after: '</span>')}
 					</th>
 					<td><strong>',
 				after: '</strong>
@@ -40,18 +37,15 @@
 				</tr>'
 			)}
 			<tr class="ProductsTotalRowSeparator">
-				<th class="Spacer"></th>
 				<td colspan="2">
 					<hr />
 				</td>
 			</tr>
 			<tr class="ProductsTotal">
-				<th class="Spacer"></th>
 				<th>{%Total}</th>
 				<td><strong>{OrderTotal}</strong></td>
 			</tr>
 			<tr class="ProductsTotalTax">
-				<th class="Spacer"></th>
 				<th>{%TotalTax}</th>
 				<td>{OrderTax}</td>
 			</tr>
