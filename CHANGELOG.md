@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2020-02-19
+### Added
+- Add return document download button to shipping confirmation
+
 ## [1.1.0] - 2019-07-10
 ### Added
 - Add theme.xml file.
