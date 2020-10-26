@@ -6,7 +6,7 @@
   "homepage": "https://www.mycashflow.fi",
   "license": "MIT",
   "private": true,
-  "main": "gulpfile.babel.js",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
@@ -16,22 +16,17 @@
     "foundation-emails": "^2.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/register": "^7.4.4",
-    "beepbeep": "^1.2.0",
     "browser-sync": "^2.11.0",
-    "colors": "^1.1.2",
     "gulp": "^4.0.0",
     "gulp-cli": "^1.1.0",
     "gulp-html-src": "^1.0.0",
     "gulp-htmlmin": "^1.1.1",
     "gulp-if": "^2.0.0",
-    "gulp-inline-css": "^3.0.0",
+    "gulp-inline-css": "^3.5.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uncss": "^1.0.1",
     "gulp-zip": "^3.2.0",
@@ -42,10 +37,5 @@
     "rimraf": "^2.3.3",
     "siphon-media-query": "^1.0.0",
     "yargs": "^4.1.0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
   }
 }

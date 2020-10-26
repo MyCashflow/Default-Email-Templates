@@ -1,15 +1,12 @@
-import gulp from 'gulp';
-import plugins from 'gulp-load-plugins';
-import browser from 'browser-sync';
-import rimraf from 'rimraf';
-import panini from 'panini';
-import lazypipe from 'lazypipe';
-import inky from 'inky';
-import fs from 'fs';
-import siphon from 'siphon-media-query';
-import path from 'path';
-import beep from 'beepbeep';
-import colors from 'colors';
+const gulp = require('gulp');
+const plugins = require('gulp-load-plugins');
+const browser = require('browser-sync');
+const rimraf = require('rimraf');
+const panini = require('panini');
+const lazypipe = require('lazypipe');
+const inky = require('inky');
+const fs = require('fs');
+const siphon = require('siphon-media-query');
 
 const $ = plugins();
 
@@ -35,21 +32,6 @@ function clean(done) {
 // Then parse using Inky templates
 function pages() {
 	return gulp.src(['src/pages/**/*.html', '!src/pages/archive/**/*.html'])
-		.pipe(panini({
-			root: 'src/pages',
-			layouts: 'src/layouts',
-			partials: 'src/modules',
-			helpers: 'src/helpers',
-			pageLayouts: {
-				'helpers': 'helper'
-			}
-		}))
-		.pipe(inky())
-		.pipe(gulp.dest('dist'));
-}
-
-function helpers() {
-	return gulp.src(['src/pages/helpers/**/*.html'])
 		.pipe(panini({
 			root: 'src/pages',
 			layouts: 'src/layouts',
