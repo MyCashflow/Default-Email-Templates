@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 - Add new version of gulp-sass@^4.1.0
 ### Removed
 - Remove gulpfile.babel.js
-- Remove all babel devDependencies and presets
+- Remove babel presets
 
 ## [1.1.1] - 2020-02-19
 ### Added
