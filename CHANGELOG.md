@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2020-11-10
+### Added
+- Add gulpfile.js
+- Add node-sass@^4.14.0 to devDependencies
+- Add new version of gulp-sass@^4.1.0
+### Removed
+- Remove gulpfile.babel.js
+- Remove all babel devDependencies and presets
+
 ## [1.1.1] - 2020-02-19
 ### Added
 - Add return document download button to shipping confirmation
