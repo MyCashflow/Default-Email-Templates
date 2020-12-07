@@ -7,6 +7,7 @@ const lazypipe = require('lazypipe');
 const inky = require('inky');
 const fs = require('fs');
 const siphon = require('siphon-media-query');
+const postcss = require('gulp-postcss');
 
 const $ = plugins();
 
@@ -73,10 +74,7 @@ function sass() {
 		.pipe($.sass({
 			includePaths: ['node_modules/foundation-emails/scss']
 		}).on('error', $.sass.logError))
-		.pipe($.uncss(
-			{
-				html: ['dist/**/*.html']
-			}))
+		.pipe(postcss([require('postcss-uncss')({ html: ['dist/**/*.html'] })]))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest('dist/css'));
 }
