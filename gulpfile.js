@@ -1,15 +1,13 @@
-import gulp from 'gulp';
-import plugins from 'gulp-load-plugins';
-import browser from 'browser-sync';
-import rimraf from 'rimraf';
-import panini from 'panini';
-import lazypipe from 'lazypipe';
-import inky from 'inky';
-import fs from 'fs';
-import siphon from 'siphon-media-query';
-import path from 'path';
-import beep from 'beepbeep';
-import colors from 'colors';
+const gulp = require('gulp');
+const plugins = require('gulp-load-plugins');
+const browser = require('browser-sync');
+const rimraf = require('rimraf');
+const panini = require('panini');
+const lazypipe = require('lazypipe');
+const inky = require('inky');
+const fs = require('fs');
+const siphon = require('siphon-media-query');
+const postcss = require('gulp-postcss');
 
 const $ = plugins();
 
@@ -76,10 +74,7 @@ function sass() {
 		.pipe($.sass({
 			includePaths: ['node_modules/foundation-emails/scss']
 		}).on('error', $.sass.logError))
-		.pipe($.uncss(
-			{
-				html: ['dist/**/*.html']
-			}))
+		.pipe(postcss([require('postcss-uncss')({ html: ['dist/**/*.html'] })]))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest('dist/css'));
 }
@@ -116,7 +111,7 @@ function inliner(css) {
 	var css = fs.readFileSync(css).toString();
 	var mqCss = siphon(css);
 
-	var pipe = lazypipe()
+	return lazypipe()
 		.pipe($.inlineCss, {
 			applyStyleTags: false,
 			removeStyleTags: false,
@@ -128,7 +123,5 @@ function inliner(css) {
 		.pipe($.htmlmin, {
 			collapseWhitespace: true,
 			minifyCSS: true
-		});
-
-	return pipe();
+		})();
 }
