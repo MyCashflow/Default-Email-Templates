@@ -8,12 +8,23 @@ const inky = require('inky');
 const fs = require('fs');
 const siphon = require('siphon-media-query');
 const postcss = require('gulp-postcss');
+const sass = require('gulp-dart-sass');
 
 const $ = plugins();
 
 // Build the "dist" folder by running all of the below tasks
-gulp.task('build',
-	gulp.series(clean, pages, sass, inline, copyThemeFile));
+gulp.task(
+	'build',
+	gulp.series(
+		clean,
+		pages,
+		buildSass,
+		inline,
+		copyThemeFile,
+		copyNewTheme,
+		copyOldTheme
+	)
+);
 
 // Build emails, run the server, and watch for file changes
 gulp.task('watch',
@@ -68,12 +79,12 @@ function resetPages(done) {
 }
 
 // Compile Sass into CSS
-function sass() {
+function buildSass() {
 	return gulp.src('src/assets/scss/app.scss')
 		.pipe($.sourcemaps.init())
-		.pipe($.sass({
+		.pipe(sass({
 			includePaths: ['node_modules/foundation-emails/scss']
-		}).on('error', $.sass.logError))
+		}).on('error', sass.logError))
 		.pipe(postcss([require('postcss-uncss')({ html: ['dist/**/*.html'] })]))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest('dist/css'));
@@ -99,11 +110,21 @@ function copyThemeFile() {
 		.pipe(gulp.dest('dist'));
 }
 
+function copyNewTheme() {
+	return gulp.src('dist/**/*')
+		.pipe(gulp.dest('../../public/themes/email/mycashflow-2018/'));
+}
+
+function copyOldTheme() {
+	return gulp.src('../../public/templates/emails/**/*')
+		.pipe(gulp.dest('../../public/themes/email/mycashflow-2012/'));
+}
+
 // Watch for file changes
 function watch() {
 	gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, inline, browser.reload));
 	gulp.watch(['src/layouts/**/*', 'src/modules/**/*']).on('all', gulp.series(resetPages, pages, inline, browser.reload));
-	gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('all', gulp.series(resetPages, sass, pages, inline, browser.reload));
+	gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('all', gulp.series(resetPages, buildSass, pages, inline, browser.reload));
 }
 
 // Inlines CSS into HTML, adds media query CSS into the <style> tag of the email, and compresses the HTML
