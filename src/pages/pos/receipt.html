@@ -1,0 +1,23 @@
+---
+_page: pos/receipt
+subject: '{OrderEmailTitle}'
+---
+
+{{> header }}
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container class="Block">
+		<h1>{{ subject }}</h1>
+		<p>
+			{%PosReceiptMessage}
+		</p>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+{{> toolbox }}
+{{> order-contents }}
+{{> pos-order-details }}
+{{> contact }}
+{{> footer }}

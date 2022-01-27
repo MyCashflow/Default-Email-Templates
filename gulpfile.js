@@ -122,9 +122,9 @@ function copyOldTheme() {
 
 // Watch for file changes
 function watch() {
-	gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, inline, browser.reload));
-	gulp.watch(['src/layouts/**/*', 'src/modules/**/*']).on('all', gulp.series(resetPages, pages, inline, browser.reload));
-	gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('all', gulp.series(resetPages, buildSass, pages, inline, browser.reload));
+	gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, inline, copyNewTheme, browser.reload));
+	gulp.watch(['src/layouts/**/*', 'src/modules/**/*']).on('all', gulp.series(resetPages, pages, inline, copyNewTheme, browser.reload));
+	gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('all', gulp.series(resetPages, buildSass, pages, inline, copyNewTheme, browser.reload));
 }
 
 // Inlines CSS into HTML, adds media query CSS into the <style> tag of the email, and compresses the HTML
