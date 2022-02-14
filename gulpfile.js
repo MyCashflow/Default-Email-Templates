@@ -117,7 +117,9 @@ function copyNewTheme() {
 
 function copyOldTheme() {
 	return gulp.src('../../public/templates/emails/**/*')
-		.pipe(gulp.dest('../../public/themes/email/mycashflow-2012/'));
+		.pipe(gulp.dest('../../public/themes/email/mycashflow-2012/'))
+		.pipe(gulp.src('../../public/templates/i/email*.gif'))
+		.pipe(gulp.dest('../../public/themes/email/mycashflow-2012/i'));
 }
 
 // Watch for file changes
