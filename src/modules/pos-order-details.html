@@ -1,0 +1,33 @@
+<wrapper class="Light">
+	<spacer size="30"></spacer>
+	<container>
+		<row class="NoMargin">
+			<columns large="6">
+				<h3>{%OrderInformation}</h3>
+				<p>
+					{OrderDate(
+						before: '<strong>{%Date}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+					{OrderNumber(
+						before: '<strong>{%Ordernumber}</strong>&nbsp;<span>',
+						after: '</span><br />'
+					)}
+				</p>
+				<spacer size="10"></spacer>
+				<h3>{%OrderPaymentTransactions}</h3>
+				<p>
+					{OrderPaymentTransactions(
+						helper: 'emails/helpers/order-payment-transaction'
+					)}
+				</p>
+				{OrderComments(
+					before: '<spacer size="10"></spacer>
+						<h3>{%CheckoutOrderComments}</h3><p>',
+					after: '</p>'
+				)}
+			</columns>
+		</row>
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>

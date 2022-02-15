@@ -1,6 +1,12 @@
 <wrapper class="Primary Toolbox">
 	<spacer size="10"></spacer>
 	<container class="Block">
+		{{#ifEquals _page 'pos/receipt'}}
+			{OrderReceiptUrl(
+				before: '<button class="small-expand" href="',
+				after: '"><span>{%DownloadReceipt}</span></button>'
+			)}
+		{{/ifEquals}}
 		{{#ifpage 'order'}}
 			{OrderPaymentTransactions(
 				before: '<h3>{%PaymentTransactionLinkHeader}</h3>',
