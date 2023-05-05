@@ -3,16 +3,19 @@
 		<tr class="ProductRow">
 			<th class="Image small-12 columns first">
 				<a href="{ProductURL}">
-					<img src="{ProductImageURL(width: 400, height: 400, link: false)}" alt="{ProductName}" width="160" />
+					<img src="{ProductImageURL(width: 400, height: 400, link: false)}" alt="{ProductName}" width="50" />
 				</a>
 			</th>
 			<th class="Spacer small-12 columns"></th>
-			<th class="small-12 columns">
-				<div class="Name">
-					<a href="{ProductURL(or: '#product' )}"><span>{ProductName}</span></a>
+			<th class="Name small-12 columns">
+				<div class="ProductName">
+					<a href="{ProductURL(or: '#product' )}"><span>{OrderProductName}</span></a>
 				</div>
+				{OrderProductVariation(before:'<div class="Variation">',after:'</div>')}
+			</th>
+			<th class="ReviewLink small-12 columns">
 				<div>
-					<a class="small-expand" href="{OrderProductReviewLink}"><span>{%ProductReviewHtmlRequest}</span></a>
+					<button class="small" href="{OrderProductReviewLink}"><span>{%ProductReviewHtmlRequest}</span></button>
 				</div>
 			</th>
 		</tr>
