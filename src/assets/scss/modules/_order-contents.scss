@@ -82,6 +82,11 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 	text-decoration: none;
 }
 
+.ProductRow .ReviewLink a,
+.ProductRow .ReviewLink a span {
+	white-space: nowrap;
+}
+
 .Variation,
 .DeliveryDate,
 .Download {
