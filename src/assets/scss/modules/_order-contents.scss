@@ -82,8 +82,8 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 	text-decoration: none;
 }
 
-.ProductRow .ReviewLink a,
-.ProductRow .ReviewLink a span {
+.ReviewLink .button {
+	margin: 0 0 0 auto;
 	white-space: nowrap;
 }
 
