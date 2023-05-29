@@ -39,6 +39,10 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 	vertical-align: middle;
 }
 
+.ProductRow th.ReviewLink {
+	vertical-align: middle;
+}
+
 .ProductRow th.Unit {
 	vertical-align: middle;
 	width: 23%;
@@ -76,6 +80,11 @@ $product-spacing:					($grid-list-gutter / 2) !default;
 	font-weight: bold;
 	line-height: 1.3em;
 	text-decoration: none;
+}
+
+.ReviewLink .button {
+	margin: 0 0 0 auto;
+	white-space: nowrap;
 }
 
 .Variation,
