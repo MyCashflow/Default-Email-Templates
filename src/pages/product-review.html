@@ -16,7 +16,29 @@ subject: '{OrderEmailTitle}'
 </wrapper>
 
 {{> toolbox }}
-{{> order-review }}
-{{> product-review-help }}
+
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		<h1>{%ProductReviewHtmlEmailTitle}</h1>
+		{OrderProducts(
+			coupon: 'false',
+			before: '<hr />',
+			helper: 'emails/helpers/order-product-review'
+		)}
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>
+
+<wrapper class="Light">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		<p>
+			{%ProductReviewHtmlEmailHelp}
+		</p>
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>
+
 {{> contact }}
 {{> footer }}
