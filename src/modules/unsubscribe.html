@@ -1,5 +1,10 @@
 <wrapper class="Legal">
     <container class="Block">
-        <p class="Text-Center">{%CartRecoveryEmailUnsubscribe}</p>
+			{{#ifpage 'pos/receipt'}}
+				<p class="Text-Center">{%CartRecoveryEmailUnsubscribe}</p>
+			{{/ifpage}}
+			{{#ifpage 'product-review'}}
+        <p class="Text-Center">{%ProductReviewEmailUnsubscribe}</p>
+			{{/ifpage}}
     </container>
 </wrapper>
