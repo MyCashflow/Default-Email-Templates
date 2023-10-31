@@ -1,0 +1,44 @@
+---
+subject: '{OrderEmailTitle}'
+---
+
+{{> header }}
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container class="Block">
+		<h1>{%LoyaltyProgramHtmlEmailHeader}</h1>
+		<p>
+			{%LoyaltyProgramHtmlEmailMessage}
+		</p>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		{CustomerDiscountCodes(
+			before: '<hr />',
+			helper: 'emails/helpers/customer-discount-codes'
+		)}
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>
+
+<wrapper class="Light">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		<p>
+			{%LoyaltyProgramHtmlEmailHelp}
+		</p>
+		<button class="small-expand" href="{ShopUrl}">
+			<span>{%LoyaltyProgramHtmlGoToShop}</span>
+		</button>
+	</container>
+	<spacer size="30"></spacer>
+</wrapper>
+
+{{> contact }}
+{{> unsubscribe }}
+{{> footer }}
