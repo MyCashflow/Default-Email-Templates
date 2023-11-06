@@ -1,10 +1,14 @@
 <spacer size="30"></spacer>
-<div>
-	<p class="DiscountCodeHeader">
-		{%EmailLoyaltyProgramDiscountCodeTitle}
-	</p>
-	<div class="DiscountCode">{DiscountCode}</div>
-	<div class="DiscountRules">
-		{%EmailLoyaltyProgramDiscountCodeRules}
+<wrapper class="Secondary">
+	<div class="DiscountCodeContainer">
+		<div class="DiscountCodeHeader">
+			{%EmailLoyaltyProgramDiscountCodeTitle}
+		</div>
+		<spacer size="10"></spacer>
+		<div><strong class="DiscountCode">{DiscountCode}</strong></div>
+		<spacer size="20"></spacer>
+		<div class="DiscountCodeRules">
+			{%EmailLoyaltyProgramDiscountCodeRules}
+		</div>
 	</div>
-</div>
+</wrapper>

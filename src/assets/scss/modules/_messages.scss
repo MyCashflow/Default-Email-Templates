@@ -50,24 +50,3 @@ blockquote.TimelineMessage.Dot {
 	margin-top: 3px;
 	height: 3px;
 }
-
-.DiscountCode {
-	font-weight: $header-font-weight;
-	font-size: $h1-font-size;
-	border: 1px solid $black;
-	border-radius: 6px;
-	padding: 10px 15px;
-	max-width: 300px;
-	text-align: center;
-}
-
-.DiscountRules {
-	font-size: $global-font-size;
-	text-align: left;
-	padding-top: $text-padding;
-}
-
-.DiscountCodeHeader {
-	font-weight: $header-font-weight;
-	font-size: $h1-font-size;
-}
