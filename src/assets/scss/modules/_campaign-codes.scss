@@ -1,12 +1,10 @@
 .DiscountCodeContainer {
 	padding: 10px;
-	text-align: center;
 }
 
 .DiscountCodeHeader {
 	font-weight: $header-font-weight;
 	font-size: $h1-font-size;
-	text-align: center;
 }
 
 .DiscountCode {
@@ -17,6 +15,9 @@
 	color: #25804b;
 }
 
-.DiscountCodeRules {
-	text-align: center;
+.CallToAction {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
