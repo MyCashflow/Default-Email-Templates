@@ -1,18 +1,23 @@
 .DiscountCodeContainer {
 	padding: 10px;
+	border: 2px dashed $color-accent-1;
 }
 
 .DiscountCodeHeader {
 	font-weight: $header-font-weight;
-	font-size: $h1-font-size;
+	font-size: $font-size-large;
 }
 
 .DiscountCode {
 	font-weight: $header-font-weight;
 	font-size: $h1-font-size;
-	border: 1px dashed #25804b;
 	padding: 5px;
-	color: #25804b;
+	color: $color-text-dark;
+}
+
+.DiscountRules {
+	font-size: $font-size-small;
+	line-height: normal;
 }
 
 .CallToAction {
