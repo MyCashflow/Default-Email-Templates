@@ -15,7 +15,7 @@ subject: '{OrderEmailTitle}'
 	<spacer size="20"></spacer>
 </wrapper>
 
-<wrapper class="Light">
+<wrapper class="Secondary">
 	<container class="Block">
 		{CustomerDiscountCodes(
 			helper: 'emails/helpers/customer-discount-codes'
@@ -25,11 +25,13 @@ subject: '{OrderEmailTitle}'
 </wrapper>
 
 <wrapper class="Primary">
-	<spacer size="10"></spacer>
+	<spacer size="20"></spacer>
 	<container class="Block">
-		<button class="small-expand CallToAction" href="{ShopUrl}">
-			<span>{%LoyaltyProgramHtmlGoToShop}</span>
-		</button>
+		<div>
+			<a href="{ShopUrl}" class="Text-Center DiscountShopButton">
+				{%LoyaltyProgramHtmlGoToShop}
+			</a>
+		</div>
 	</container>
 	<spacer size="30"></spacer>
 </wrapper>
