@@ -16,7 +16,7 @@
 .DiscountCode {
 	font-weight: $header-font-weight;
 	font-size: $h1-font-size;
-	color: #25804B;
+	color: $color-accent-1;
 }
 
 .DiscountShopButton {
@@ -24,7 +24,7 @@
 	font-size: $font-size-large;
 	display: block;
 	padding: 10px 0;
-	background-color: #25804B;
+	background-color: $color-accent-1;
 	color: $white;
 	text-decoration: none;
 	width: 100%;
