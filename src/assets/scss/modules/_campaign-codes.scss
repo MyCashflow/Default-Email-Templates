@@ -1,0 +1,32 @@
+.DiscountCodeContainer {
+	padding: 20px;
+	border: 1px solid #dddddd;
+	border-radius: 7px;
+}
+
+.DiscountCodeContainer hr {
+	background-color: #e7e9e8;
+}
+
+.DiscountCodeHeader {
+	font-weight: $header-font-weight;
+	font-size: $font-size-large;
+}
+
+.DiscountCode {
+	font-weight: $header-font-weight;
+	font-size: $h1-font-size;
+	color: $color-accent-1;
+}
+
+.DiscountShopButton {
+	font-weight: $header-font-weight;
+	font-size: $font-size-large;
+	display: block;
+	padding: 10px 0;
+	background-color: $color-accent-1;
+	color: $white;
+	text-decoration: none;
+	width: 100%;
+	border-radius: 7px;
+}
