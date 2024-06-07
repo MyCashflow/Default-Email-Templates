@@ -12,7 +12,7 @@ subject: '{OrderEmailTitle}'
 			{{> greeting }}
 			{%EmailTextPaymentNotification}
 		</p>
-		{PaymentMethodInstructions(
+		{OrderPaymentInstructions(
 			before: '<p>',
 			after: '</p>'
 		)}
