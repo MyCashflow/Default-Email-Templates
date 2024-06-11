@@ -49,6 +49,17 @@
 				<th>{%TotalTax}</th>
 				<td>{OrderTax}</td>
 			</tr>
+			{Helper(
+				case: 'VatFreePricing',
+				before: '
+					<tr class="ProductsTotalTax">
+						<th>{%Total} ({%VAT} {OrderTaxRate}&nbsp;%)</th>
+						<td><strong>',
+				after: '
+						</strong></td>
+					</tr>',
+				file: 'emails/helpers/order-total-with-tax'
+			)}
 		</table>
 		<spacer size="30"></spacer>
 	</container>
