@@ -12,6 +12,17 @@
 				<th>{%CheckoutProductsTotal}</th>
 				<td><strong>{OrderSubTotal}</strong></td>
 			</tr>
+			{OrderDiscount(
+				before: '
+					<tr class="Subtotal Discounts">
+						<th>
+							{%DiscountLabelMultiple}
+						</th>
+						<td><strong>-',
+				after: '</strong>
+						</td>
+					</tr>'
+			)}
 			{OrderShippingCosts(
 				before: '
 				<tr class="Subtotal ShippingCosts">
