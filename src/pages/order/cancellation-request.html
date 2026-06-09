@@ -1,0 +1,62 @@
+---
+subject: '{OrderEmailTitle}'
+---
+
+{{> header }}
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container class="Block">
+		<h1>{OrderEmailTitle}</h1>
+		<p>
+			{{> greeting }}
+			{%EmailTextOrderCancellationRequest}
+		</p>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+<wrapper class="Primary">
+	<container class="Block">
+		<row class="NoMargin">
+			<columns large="6">
+				<strong>{%EmailLabelOrderCancellationRequestReceivedAt}</strong><br />
+				{OrderCancellationRequestReceivedAt}
+			</columns>
+			<columns large="6">
+				<spacer size="10" class="Show-Small"></spacer>
+				<strong>{%EmailLabelOrderCancellationRequestSubmittedBy}</strong><br />
+				{OrderName}
+			</columns>
+		</row>
+		{OrderCancellationRequestReason(
+			before: '<row class="NoMargin"><columns><spacer size="10"></spacer><strong>{%EmailLabelOrderCancellationRequestReason}</strong><br />',
+			after: '</columns></row>'
+		)}
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+<wrapper class="Secondary">
+	<spacer size="30"></spacer>
+	<container class="Block">
+		<h1>{%EmailLabelOrderCancellationRequestContents}</h1>
+		{OrderProducts(
+			before: '<hr />',
+			helper: 'emails/helpers/order-product'
+		)}
+		<spacer size="30"></spacer>
+	</container>
+	<spacer size="10"></spacer>
+</wrapper>
+
+<wrapper class="Primary">
+	<spacer size="10"></spacer>
+	<container class="Block">
+		<p>{%OrderCancellationProcessText}</p>
+	</container>
+	<spacer size="20"></spacer>
+</wrapper>
+
+{{> contact }}
+{{> footer }}
