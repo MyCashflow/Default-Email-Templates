@@ -7,7 +7,7 @@ subject: '{OrderEmailTitle}'
 <wrapper class="Primary">
 	<spacer size="10"></spacer>
 	<container class="Block">
-		<h1>{OrderEmailTitle}</h1>
+		<h1>{%EmailHeadingOrderCancellationRequest}</h1>
 		<p>
 			{{> greeting }}
 			{%EmailTextOrderCancellationRequest}
@@ -54,6 +54,7 @@ subject: '{OrderEmailTitle}'
 	<spacer size="10"></spacer>
 	<container class="Block">
 		<p>{%OrderCancellationProcessText}</p>
+		<p>{%EmailFooterOrderCancellationRequest}</p>
 	</container>
 	<spacer size="20"></spacer>
 </wrapper>
