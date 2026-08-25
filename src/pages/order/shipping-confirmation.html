@@ -10,11 +10,8 @@ subject: '{OrderEmailTitle}'
 		<h1>{{> greeting }}</h1>
 		<p>{OrderEmailMessage}</p>
 		{OrderTrackingCodes(
-			before: '
-				<p>
-					<strong>{%TrackingCode}:</strong><br />',
-			after: '
-				</p>',
+			before: '<p><strong>{%TrackingCode}:</strong><br />',
+			after: '</p>',
 			helper: 'emails/helpers/order-tracking-code'
 		)}
 		<spacer size="15"></spacer>

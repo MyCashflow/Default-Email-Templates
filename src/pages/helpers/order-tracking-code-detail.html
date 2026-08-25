@@ -1,1 +1,5 @@
-<span>{ParcelTrackingCode}</span><br />
+{ParcelTrackingURL(
+	before: '<br /><a href="',
+	after: '" target="_blank" rel="nofollow">{ParcelTrackingCode}</a>',
+	or: '<br /><span>{ParcelTrackingCode}</span>'
+)}

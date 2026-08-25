@@ -49,9 +49,8 @@
 			)}
 		{{/ifpage}}
 		{{#ifpage 'shipping-confirmation'}}
-			{OrderTrackingUrl(
-				before: '<button class="small-expand" href="',
-				after: '"><span>{%TrackOrder}</span></button>'
+			{OrderTrackingCodes(
+				helper: 'emails/helpers/order-tracking-button'
 			)}
 			{OrderInvoiceUrl(
 				before: '<button class="small-expand" href="',
