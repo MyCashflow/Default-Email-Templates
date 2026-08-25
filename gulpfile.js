@@ -9,6 +9,8 @@ const fs = require('fs');
 const siphon = require('siphon-media-query');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-dart-sass');
+const { Transform } = require('stream');
+const path = require('path');
 
 const $ = plugins();
 
@@ -44,6 +46,7 @@ function clean(done) {
 // Then parse using Inky templates
 function pages() {
 	return gulp.src(['src/pages/**/*.html', '!src/pages/archive/**/*.html'])
+		.pipe(pagePaths())
 		.pipe(panini({
 			root: 'src/pages',
 			layouts: 'src/layouts',
@@ -55,6 +58,20 @@ function pages() {
 		}))
 		.pipe(inky())
 		.pipe(gulp.dest('dist'));
+}
+
+function pagePaths() {
+	return new Transform({
+		objectMode: true,
+		transform(file, enc, cb) {
+			const relative = path.relative(path.join(file.cwd, 'src/pages'), file.path);
+			const {dir, name} = path.parse(file.path);
+			file.data = Object.assign({}, file.data, {
+				_page: path.format({dir: path.basename(dir), name: name}).replace(/\\/g, '/')
+			});
+			cb(null, file);
+		}
+	});
 }
 
 function helpers() {
