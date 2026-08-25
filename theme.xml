@@ -6,5 +6,6 @@
 	<Features>
 		<GiftCards supported="true" />
 		<Discounts supported="true" />
+		<MultiParcelTracking supported="true" />
 	</Features>
 </Theme>

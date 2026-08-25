@@ -9,14 +9,13 @@ subject: '{OrderEmailTitle}'
 	<container class="Block">
 		<h1>{{> greeting }}</h1>
 		<p>{OrderEmailMessage}</p>
-		{OrderTrackingCode(
+		{OrderTrackingCodes(
 			before: '
 				<p>
-					<strong>{%TrackingCode}:</strong><br />
-					<code>',
+					<strong>{%TrackingCode}:</strong><br />',
 			after: '
-					</code>
-				</p>'
+				</p>',
+			helper: 'emails/helpers/order-tracking-code'
 		)}
 		<spacer size="15"></spacer>
 		{OrderShippingInformation(
