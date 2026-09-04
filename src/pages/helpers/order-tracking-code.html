@@ -1,1 +1,5 @@
-<code>{%Parcel} {ParcelNumber}: {ParcelTrackingCode}</code><br />
+{ParcelTrackingURL(
+	before: '<a href="',
+	after: '" target="_blank" rel="nofollow" title="{%Parcel} {ParcelNumber}: {ParcelTrackingCode}"><code>{ParcelTrackingCode}</code></a><br />',
+	or: '<code>{ParcelTrackingCode}</code><br />'
+)}

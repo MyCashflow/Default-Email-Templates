@@ -64,9 +64,10 @@ function pagePaths() {
 	return new Transform({
 		objectMode: true,
 		transform(file, enc, cb) {
-			const {dir, name} = path.parse(file.path);
+			const relative = path.relative(path.join(file.cwd, 'src/pages'), file.path);
+			const {dir, name} = path.parse(relative);
 			file.data = Object.assign({}, file.data, {
-				_page: path.format({dir: path.basename(dir), name: name}).replace(/\\/g, '/'),
+				_page: path.join(dir, name).replace(/\\/g, '/'),
 			});
 			cb(null, file);
 		}
