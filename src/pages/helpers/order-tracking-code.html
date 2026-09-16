@@ -1,5 +1,5 @@
-{ParcelTrackingURL(
+{ParcelNumber(when: "{ParcelCount} > 1", before: '{%Parcel} ', after: ': ')}{ParcelTrackingURL(
 	before: '<a href="',
-	after: '" target="_blank" rel="nofollow" title="{%Parcel} {ParcelNumber}: {ParcelTrackingCode}"><code>{ParcelTrackingCode}</code></a><br />',
+	after: '" target="_blank" rel="nofollow"><code>{ParcelTrackingCode}</code></a><br />',
 	or: '<code>{ParcelTrackingCode}</code><br />'
 )}
