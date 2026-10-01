@@ -21,9 +21,9 @@
 						before: '<strong>{%CheckoutShipping}</strong>&nbsp;<span>',
 						after: '</span><br />'
 					)}
-					{OrderTrackingCode(
-						before: '<strong>{%TrackingCode}</strong>&nbsp;<span>',
-						after: '</span><br />'
+					{OrderTrackingCodes(
+						before: '<strong>{%TrackingCode}</strong>&nbsp;',
+						helper: 'emails/helpers/order-tracking-code-detail'
 					)}
 				</p>
 				<spacer size="10"></spacer>

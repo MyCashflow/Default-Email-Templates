@@ -1,0 +1,5 @@
+{ParcelTrackingURL(
+	before: '<a href="',
+	after: '" target="_blank" rel="nofollow">{ParcelTrackingCode}</a>',
+	or: '<span>{ParcelTrackingCode}</span>'
+)} {Helper(when: "{ParcelCount} > 1", file: 'emails/helpers/order-parcel-label')}<br />
